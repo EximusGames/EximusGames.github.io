@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+<title>Eximus Games</title>
+<!-- 
+<meta http-equiv="refresh" content="0;url=http://eximus.github.io"/>
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0">
+<link rel="icon" href="images/Icon.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/flexboxgrid.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,400" rel="stylesheet">
+</head>
+    <body>
+        <!-- MENU -->
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-times"></i></a>
+          <a href="#showcase"><i class="fa fa-home clicable"></i></a>
+          <a href="#games"><i class="fa fa-gamepad clicable"></i></a>
+          <a href="#about"><i class="fa fa-book clicable"></i></a>
+          <a href="#team"><i class="fa fa-users clicable"></i></a>
+          <a href="#contact"><i class="fa fa-address-book clicable"></i></a>
+        </div>
+
+        <span onclick="openNav()" id="menu-button"><i class="fa fa-bars"></i></span>
+
+        <!-- EFEMERO WINDOW -->
+        <div id="card-efemero" class="overlay">
+            <div id="clickOutSide" onclick="closeWindow()"></div>
+            <div class="modal">
+            <div class="close-btn" onclick="closeWindow()"><i class="fa fa-times"></i></div>
+                <div class="row center-xs center-sm center-md center-lg middle-lg middle-md">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">                    
+                        <div class="slideshow-container">
+                          <div class="mySlides fade" style="display: block;">
+                            <img src="images/jogos/efemero.jpg">
+                          </div>
+
+                          <div class="mySlides fade">
+                            <img src="images/jogos/efemero-start.jpg">
+                          </div>
+
+                          <div class="mySlides fade">
+                            <img src="images/jogos/efemero-deck.jpg">
+                          </div>
+
+                          <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left"></i></a>
+                          <a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-right"></i></a>
+
+                          <div class="dots">
+                              <span class="dot active" onclick="currentSlide(1)"></span> 
+                              <span class="dot" onclick="currentSlide(2)"></span> 
+                              <span class="dot" onclick="currentSlide(3)"></span> 
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> 
+                    <h2>Efêmero</h2>
+                    <p>Efêmero conta a história de um jovem que perdeu a felicidade e não encontra um propósito para seguir em frente. Sua vida se tornou monótona e nada que ele faça o faz se sentir bem e com isso ele descobre que tudo é temporário, e que apenas por um dia ele poderia mudar seu destino.</p>
+                    <h6>Drama</h6>
+                    <h6>Psicológico</h6>
+                    <h6>Pixel Art</h6>
+                    <h6>PC</h6>
+                       
+                    <!--<p class="age"><span>10</span> Não recomendado para menores de 10 anos.</p>-->
+                    </div>
+                        
+                    <a class="play-link" href="https://gamejolt.com/@InsomniaGameDev">Jogar agora</a>                    
+                </div>    
+            </div>
+            </div>
+        </div>
+
+        <!-- SHOWCASE -->
+        <section id="showcase">
+            <div class="container">
+                <div class="row row-showcase center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+                    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-7 showcase-content">
+                        <img src="images/Eximus.svg" alt="Eximus Game Dev" id="logo">
+                    </div>
+                </div>
+                <div class="row center-xs">
+                    <i class="fa fa-chevron-down down-arrow bounce"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAMES -->
+        <section id="games">
+            <div class="container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2>Jogos</h2>
+                    <p></p>
+
+                        <!--ICON ROW 1-->
+                        <div class="row center-xs center-sm center-md middle-lg">
+                            <div id="card-efemero" class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card">
+                            <img src="images/jogos/efemero.jpg">
+                            <h4>Efêmero</h4>
+                            <p>A vida é curta, o tempo passa rápido, sentimentos são passageiros e tudo isso é Efêmero.</p>
+                            <h6>Drama</h6>
+                            <h6>Psicológico</h6>
+                            <h6>Pixel Art</h6>
+                            <H6>PC</H6>
+                            <br><br>
+                            <a onclick="openWindow()" class="button-play">Saiba mais</a>
+
+                            </div>
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
+                            <img src="images/jogos/heroi_do_vazio.png"><br>
+                            <h4>Herói do Vazio</h4>
+                            <p>Em desenvolvimento.</p>
+                            <a href="" class="button-play button-disable">Em breve</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US -->
+        <section id="about">
+            <div class="container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Sobre Nós</h2>
+                        <div class="row center-xs center-sm center-md middle-lg"><p>A Eximus é uma equipe que foi criada em 2016 por um grupo de amigos que se conheceram na faculdade e dividiam o mesmo sonho de criar uma produtora de jogos para celulares, computadores e videogames. 
+                        <br><br>
+                        A equipe é formada por cinco integrantes que ainda estão em processo de especialização e desenvolvendo seus primeiros jogos independentes.
+                        <br>
+                        <h3 class="quote">"Crescer significa mudar e mudar envolve riscos. <br>
+                        É a passagem do conhecido para o desconhecido,
+                        que assusta qualquer um, 
+                        Mas não àqueles que vivem-no."</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--TEAM-->
+        <section id="team">
+            <div class="container">
+                <div class="row center-xs center-sm center-md center-lg">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2>Equipe</h2>
+                        <div class="row center-xs center-sm center-md center-lg">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
+                             
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item ch-img-1">
+                                        <div class="ch-info">
+                                            <h3>Carlos Eduardo</h3>
+                                            <p>Roteirista &amp; Ilustrador</p>
+                                            <div class="links"><a href="http://facebook.com/Kaatuto"><i class="fa fa-facebook-square"></i></a>
+                                            <a href="http://instagram.com/Kaatuto"><i class="fa fa-instagram"></i></a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item ch-img-2">
+                                        <div class="ch-info">
+                                            <h3>Eduarda Michaelle</h3>
+                                            <p>musicista &amp; Ilustradora</p>
+                                            <div class="links"><a href="http://instagram.com/eduardamichaelle"><i class="fa fa-instagram"></i></a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item ch-img-3">
+                                        <div class="ch-info">
+                                            <h3>Elias Vaz</h3>
+                                            <p>Ilustrador &amp; Prog.</p>
+                                            <div class="links"><a href="https://www.facebook.com/elias.vaz.56"><i class="fa fa-facebook-square"></i></a>
+                                            <a href="https://www.instagram.com/eliastvaz/"><i class="fa fa-instagram"></i></a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item ch-img-4">
+                                        <div class="ch-info">
+                                            <h3>Gelson Higino</h3>
+                                            <p>Programador</p>
+                                            <div class="links"><a href="https://www.facebook.com/ghhzN"><i class="fa fa-facebook-square"></i></a></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item ch-img-5">
+                                        <div class="ch-info">
+                                            <h3>Kelly Cristina</h3>
+                                            <p>Programadora</p></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--FOOTER-->
+        <footer id="main-footer">
+            <div class="container">
+            <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2>Fale Conosco</h2>
+                    <h3><i class="fa fa-envelope"></i>   eximusgames@gmail.com</h3> 
+                    <p>Copyright &copy; 2017 | Eximus Games</p>
+                </div>
+            </div>
+            </div>
+        </footer>
+	</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascript/script.js"></script>
+</html>
