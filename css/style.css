@@ -172,7 +172,7 @@ img{
 
 /* SHOWCASE */
 #showcase{
-    background: url('../images/Background/dustin-lee-19666.jpg');
+    background: url('../images/Background/ian-espinosa-311604.jpg');
     object-fit: cover;
     background-position: center;
     background-attachment: fixed;       
@@ -256,8 +256,13 @@ img{
 }
 
 #games p{
-    padding: 0 15px;
+    font-size: 14px;
+    padding: 0 25px;
     margin: 0;
+    margin-bottom: 10px;
+}
+
+#games .disable-card p{
     margin-bottom: 20px;
 }
 
@@ -537,8 +542,8 @@ img{
 }
 
 #team .ch-grid li {
-	width: 220px;
-	height: 220px;
+	width: 210px;
+	height: 210px;
 	display: inline-block;
 	margin: 20px;
 }
