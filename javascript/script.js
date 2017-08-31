@@ -65,6 +65,8 @@ $(window).scroll(function () {
     }
 });
 
+
+//MENU DISPLAY
 function openNav() {
     "use strict";
     document.getElementById("mySidenav").style.width = "65px";
@@ -75,19 +77,77 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 
+
+
+//GAMES LEARN MORE
 function openWindow() {
     "use strict";
-    document.getElementById("card-efemero").style.visibility = "visible";
-    document.getElementById("card-efemero").style.opacity = "1";
+    document.getElementById("card-more").style.visibility = "visible";
+    document.getElementById("card-more").style.opacity = "1";
 }
 
 function closeWindow() {
     "use strict";
-    document.getElementById("card-efemero").style.opacity = "0";
+    document.getElementById("card-more").style.opacity = "0";
     setTimeout(function () {
-        document.getElementById("card-efemero").style.visibility = "hidden";
+        document.getElementById("card-more").style.visibility = "hidden";
     }, 300);
 }
+
+var games = [{
+        "name": "Efêmero",
+        "brief": "Efêmero conta a história de um jovem que perdeu a felicidade e não encontra um propósito para seguir em frente. Sua vida se tornou monótona e nada que ele faça o faz se sentir bem e com isso ele descobre que tudo é temporário, e que apenas por um dia ele poderia mudar seu destino.",
+        "tags": ["Drama","pixel art","psicológico","pc"],
+        "images": ["images/jogos/efemero.jpg", "images/jogos/efemero-start.jpg", "images/jogos/efemero-deck.jpg"]
+        },
+        {
+        "name": "Herói Do Vazio",
+        "brief": "Herói do Vazio.",
+        "tags": ["pixel art", "pc"],
+        "images": ["images/jogos/heroi_do_vazio.png", "images/jogos/heroi_do_vazio.png", "images/jogos/heroi_do_vazio.png"]
+        }
+];
+
+
+function tagsGenerate(numIDGame) {
+    "use strict";
+    var output = "";
+    for (var i = 0; i < games[numIDGame].tags.length; i++){
+        output += '<h6>'+ games[numIDGame].tags[i] +' </h6>';
+    }
+    return output;
+}
+
+function imageGenerate(numIDGame){
+    "use strict";
+    document.getElementById("slideshow-image-1").src= games[numIDGame].images[0];
+    
+    document.getElementById("slideshow-image-2").src= games[numIDGame].images[1];
+    
+    document.getElementById("slideshow-image-3").src= games[numIDGame].images[2];
+}
+
+function windowInfo(gameID) {
+    "use strict";
+    imageGenerate(gameID);
+    document.getElementById("game-title").innerHTML = games[gameID].name;
+    document.getElementById("game-brief").innerHTML = games[gameID].brief;
+    document.getElementById("game-tags").innerHTML = tagsGenerate(gameID);
+    openWindow();
+}
+
+
+//SETTING THE INFO
+function efemeroWindow(gameID) {
+    "use strict";
+    windowInfo(0);
+}
+
+function heroiWindow() {
+    "use strict";
+    windowInfo(1);
+}
+
 
 var slideIndex = 1;
 showSlides(slideIndex);

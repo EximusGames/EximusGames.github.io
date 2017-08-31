@@ -24,23 +24,24 @@
         <span onclick="openNav()" id="menu-button"><i class="fa fa-bars"></i></span>
 
         <!-- EFEMERO WINDOW -->
-        <div id="card-efemero" class="overlay">
+        <div id="card-more" class="overlay">
             <div id="clickOutSide" onclick="closeWindow()"></div>
             <div class="modal">
             <div class="close-btn" onclick="closeWindow()"><i class="fa fa-times"></i></div>
                 <div class="row center-xs center-sm center-md center-lg middle-lg middle-md">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">                    
-                        <div class="slideshow-container">
-                          <div class="mySlides fade" style="display: block;">
-                            <img src="images/jogos/efemero.jpg">
+                        <div class="slideshow-container" id="slideshow">
+                          <div class="mySlides fade" style="display: block;" >
+                              
+                            <img id="slideshow-image-1" src="images/jogos/efemero.jpg">
                           </div>
 
                           <div class="mySlides fade">
-                            <img src="images/jogos/efemero-start.jpg">
+                            <img  id="slideshow-image-2" src="images/jogos/efemero-start.jpg">
                           </div>
 
                           <div class="mySlides fade">
-                            <img src="images/jogos/efemero-deck.jpg">
+                            <img id="slideshow-image-3" src="images/jogos/efemero-deck.jpg">
                           </div>
 
                           <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left"></i></a>
@@ -49,19 +50,14 @@
                           <div class="dots">
                               <span class="dot active" onclick="currentSlide(1)"></span> 
                               <span class="dot" onclick="currentSlide(2)"></span> 
-                              <span class="dot" onclick="currentSlide(3)"></span> 
+                              <span class="dot" onclick="currentSlide(3)"></span>
                           </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> 
-                    <h2>Efêmero</h2>
-                    <p>Efêmero conta a história de um jovem que perdeu a felicidade e não encontra um propósito para seguir em frente. Sua vida se tornou monótona e nada que ele faça o faz se sentir bem e com isso ele descobre que tudo é temporário, e que apenas por um dia ele poderia mudar seu destino.</p>
-                    <h6>Drama</h6>
-                    <h6>Psicológico</h6>
-                    <h6>Pixel Art</h6>
-                    <h6>PC</h6>
-                       
-                    <!--<p class="age"><span>10</span> Não recomendado para menores de 10 anos.</p>-->
+                        <h2 id="game-title">Nome</h2>
+                        <p id="game-brief">Descrição</p>
+                        <div id="game-tags">Tags</div>
                     </div>
                         
                     <a class="play-link" href="https://gamejolt.com/@Eximus-Games" target="_blank">Jogar agora</a>                    
@@ -98,12 +94,12 @@
                             <img src="images/jogos/efemero.jpg">
                             <h4>Efêmero</h4>
                             <p>A vida é curta, o tempo passa rápido, sentimentos são passageiros e tudo isso é Efêmero.</p>
+                            <h6>Pixel Art</h6>
                             <h6>Drama</h6>
                             <h6>Psicológico</h6>
-                            <h6>Pixel Art</h6>
                             <H6>PC</h6>
                             <br><br>
-                            <a onclick="openWindow()" class="button-play">Saiba mais</a>
+                            <a onclick="efemeroWindow()" class="button-play">Saiba mais</a>
 
                             </div>
                             <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
@@ -153,7 +149,7 @@
                                     <div class="ch-item ch-img-1">
                                         <div class="ch-info">
                                             <h3>Carlos Eduardo</h3>
-                                            <p>Roteirista &amp; Ilustrador</p>
+                                            <p>Roteirista</p>
                                             <div class="links"><a href="http://facebook.com/Kaatuto"><i class="fa fa-facebook-square"></i></a>
                                             <a href="http://instagram.com/Kaatuto"><i class="fa fa-instagram"></i></a></div>
                                         </div>
@@ -168,7 +164,7 @@
                                     <div class="ch-item ch-img-2">
                                         <div class="ch-info">
                                             <h3>Eduarda Michaelle</h3>
-                                            <p>musicista &amp; Ilustradora</p>
+                                            <p>musicista</p>
                                             <div class="links"><a href="http://instagram.com/eduardamichaelle"><i class="fa fa-instagram"></i></a></div>
                                         </div>
                                     </div>
@@ -182,7 +178,7 @@
                                     <div class="ch-item ch-img-3">
                                         <div class="ch-info">
                                             <h3>Elias Vaz</h3>
-                                            <p>Ilustrador &amp; Prog.</p>
+                                            <p>Ilustrador</p>
                                             <div class="links"><a href="https://www.facebook.com/elias.vaz.56"><i class="fa fa-facebook-square"></i></a>
                                             <a href="https://www.instagram.com/eliastvaz/"><i class="fa fa-instagram"></i></a></div>
                                         </div>

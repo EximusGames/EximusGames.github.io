@@ -321,6 +321,7 @@ img{
     position: fixed;
     background: rgba(0,0,0,0.5);
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -378,12 +379,14 @@ img{
 }
 
 .overlay h6{
-    font-size: 12px;
+    font-size: 11px;
+    margin: 0 3px;
+    text-align: center;
     text-transform: uppercase;
     background: #0f0e0e;
     border-radius: 4px;
     display: inline;
-    padding: 6px 8px;
+    padding: 4px 7px;
 }
 
 .overlay .play-link{
