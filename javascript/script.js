@@ -102,7 +102,8 @@ var games = [{
             "images/jogos/efemero.jpg",
             "images/jogos/efemero-start.jpg", "images/jogos/efemero-deck.jpg"],
         "tags": ["Drama","pixel art","psicológico","pc"],
-        "play": "disable"
+        "play": "disable",
+        "url": "https://gamejolt.com/@Eximus-Games"
         },
         {
         "name": "Herói Do Vazio",
@@ -150,8 +151,11 @@ function buttonGenerate(numIDGame) {
     if(games[numIDGame].play == "disable"){
         play.addClass("disable-play-btn");
         play.removeAttr("href");
-    }else
+        document.getElementById("play").innerHTML = "EM BREVE";
+    }else{
         play.removeClass("disable-play-btn");
+        document.getElementById("play").href = games[numIDGame].url;
+    }
 }
 
 function windowInfo(gameID) {
