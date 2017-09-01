@@ -315,6 +315,15 @@ img{
     cursor: not-allowed;
 }
 
+#games ul{
+    padding: 0;
+    margin: 0;
+}
+
+#games li{
+    list-style-type: none;
+}
+
 /* WINDOW */
 .overlay{
     z-index: 3;

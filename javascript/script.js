@@ -94,19 +94,10 @@ function closeWindow() {
     }, 300);
 }
 
-var games = [{
-        "name": "Efêmero",
-        "brief": "Efêmero conta a história de um jovem que perdeu a felicidade e não encontra um propósito para seguir em frente. Sua vida se tornou monótona e nada que ele faça o faz se sentir bem e com isso ele descobre que tudo é temporário, e que apenas por um dia ele poderia mudar seu destino.",
-        "tags": ["Drama","pixel art","psicológico","pc"],
-        "images": ["images/jogos/efemero.jpg", "images/jogos/efemero-start.jpg", "images/jogos/efemero-deck.jpg"]
-        },
-        {
-        "name": "Herói Do Vazio",
-        "brief": "Herói do Vazio.",
-        "tags": ["pixel art", "pc"],
-        "images": ["images/jogos/heroi_do_vazio.png", "images/jogos/heroi_do_vazio.png", "images/jogos/heroi_do_vazio.png"]
-        }
-];
+//Game list Request
+var gameJsonRequest = new XMLHttpRequest();
+gameJsonRequest.open('GET','');
+var games = JSON.parse(gameJsonRequest.responseText);
 
 
 function tagsGenerate(numIDGame) {
@@ -119,17 +110,30 @@ function tagsGenerate(numIDGame) {
 }
 
 function imageGenerate(numIDGame){
-    "use strict";
-    document.getElementById("slideshow-image-1").src= games[numIDGame].images[0];
+    "use strict";    
+    $('#image-show').empty();
     
-    document.getElementById("slideshow-image-2").src= games[numIDGame].images[1];
+    document.getElementById("image-show").innerHTML = '<div class="mySlides fade" style="display: block;" ><img id="slideshow-image-1" src="' + games[numIDGame].images[0] +'"></div>';
+    for(var i = 2; i <= games[numIDGame].images.length; i++){
+        document.getElementById("image-show").innerHTML += '<div class="mySlides fade"><img id="slideshow-image-' + i + '" src="'+ games[numIDGame].images[i-1] +'"></div>';    
+    }
+}
+
+function dotsGenerate(numIDGame){
+    "use strict";    
+    $('#dots-show').empty();
     
-    document.getElementById("slideshow-image-3").src= games[numIDGame].images[2];
+    document.getElementById("dots-show").innerHTML += '<span class="dot active" onclick="currentSlide(' + 1 + ')"></span>';
+    
+    for(var i = 2; i <= games[numIDGame].images.length; i++){
+        document.getElementById("dots-show").innerHTML += '<span class="dot" onclick="currentSlide(' + i + ')"></span>';
+    }
 }
 
 function windowInfo(gameID) {
     "use strict";
     imageGenerate(gameID);
+    dotsGenerate(gameID);
     document.getElementById("game-title").innerHTML = games[gameID].name;
     document.getElementById("game-brief").innerHTML = games[gameID].brief;
     document.getElementById("game-tags").innerHTML = tagsGenerate(gameID);
@@ -138,15 +142,10 @@ function windowInfo(gameID) {
 
 
 //SETTING THE INFO
-function efemeroWindow(gameID) {
-    "use strict";
-    windowInfo(0);
-}
+$(document).on("click", ".game-id li a", function () {
+    windowInfo($(this).parent().attr("value"));
+});
 
-function heroiWindow() {
-    "use strict";
-    windowInfo(1);
-}
 
 
 var slideIndex = 1;

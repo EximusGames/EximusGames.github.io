@@ -31,29 +31,21 @@
                 <div class="row center-xs center-sm center-md center-lg middle-lg middle-md">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">                    
                         <div class="slideshow-container" id="slideshow">
-                          <div class="mySlides fade" style="display: block;" >
-                              
-                            <img id="slideshow-image-1" src="images/jogos/efemero.jpg">
-                          </div>
+                            
+                          <!--IMAGE 1-->
+                          <div id="image-show"></div>
 
-                          <div class="mySlides fade">
-                            <img  id="slideshow-image-2" src="images/jogos/efemero-start.jpg">
-                          </div>
-
-                          <div class="mySlides fade">
-                            <img id="slideshow-image-3" src="images/jogos/efemero-deck.jpg">
-                          </div>
-
+                          <!--ARROWS-->       
                           <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left"></i></a>
                           <a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-right"></i></a>
-
-                          <div class="dots">
-                              <span class="dot active" onclick="currentSlide(1)"></span> 
-                              <span class="dot" onclick="currentSlide(2)"></span> 
-                              <span class="dot" onclick="currentSlide(3)"></span>
+                        
+                          <!--DOTS-->   
+                          <div class="dots"id="dots-show">
                           </div>
                         </div>
                     </div>
+                    
+                    <!--DESCRIPTION-->   
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> 
                         <h2 id="game-title">Nome</h2>
                         <p id="game-brief">Descrição</p>
@@ -99,14 +91,18 @@
                             <h6>Psicológico</h6>
                             <H6>PC</h6>
                             <br><br>
-                            <a onclick="efemeroWindow()" class="button-play">Saiba mais</a>
+                            <ul class="game-id">
+                                <li value="0"><a class="button-play">Saiba mais</a></li>    
+                            </ul>
 
                             </div>
                             <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
                             <img src="images/jogos/heroi_do_vazio.png"><br>
                             <h4>Herói do Vazio</h4>
                             <p>Em desenvolvimento.</p>
-                            <a class="button-play button-disable">Em breve</a>
+                            <ul class="game-id">
+                                <li value="1"><a class="button-play button-disable">Em breve</a></li>    
+                            </ul>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,17 @@
+[{
+        "name": "Efêmero",
+        "brief": "Efêmero conta a história de um jovem que perdeu a felicidade e não encontra um propósito para seguir em frente. Sua vida se tornou monótona e nada que ele faça o faz se sentir bem e com isso ele descobre que tudo é temporário, e que apenas por um dia ele poderia mudar seu destino.",
+        "tags": ["Drama","pixel art","psicológico","pc"],
+        "images": [
+            "images/jogos/efemero.jpg",
+            "images/jogos/efemero-start.jpg", "images/jogos/efemero-deck.jpg"]
+        },
+        {
+        "name": "Herói Do Vazio",
+        "brief": "Herói do Vazio.",
+        "tags": ["pixel art", "pc"],
+        "images": [
+            "images/jogos/heroi_do_vazio.png", "images/jogos/heroi_do_vazio.png", "images/jogos/efemero-deck.jpg",
+            "images/jogos/heroi_do_vazio.png"]
+        }
+];
