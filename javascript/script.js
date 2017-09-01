@@ -95,10 +95,24 @@ function closeWindow() {
 }
 
 //Game list Request
-var gameJsonRequest = new XMLHttpRequest();
-gameJsonRequest.open('GET','EximusGames.github.io/json/games.json');
-var games = JSON.parse(gameJsonRequest.responseText);
-
+var games = [{
+        "name": "Efêmero",
+        "brief": "Efêmero conta a história de um jovem que perdeu a felicidade e não encontra um propósito para seguir em frente. Sua vida se tornou monótona e nada que ele faça o faz se sentir bem e com isso ele descobre que tudo é temporário, e que apenas por um dia ele poderia mudar seu destino.",
+        "images": [
+            "images/jogos/efemero.jpg",
+            "images/jogos/efemero-start.jpg", "images/jogos/efemero-deck.jpg"],
+        "tags": ["Drama","pixel art","psicológico","pc"],
+        "play": "disable"
+        },
+        {
+        "name": "Herói Do Vazio",
+        "brief": "Demétrio é um agente renomado da Êxodo, uma instituição governamental de proteção à Via Láctea. Ele é enviado em uma importante missão para impedir que uma fissura de uma dimensão paralela corrompa e destrua o Sistema Solar de uma vez por todas.",
+        "images": [
+            "images/jogos/heroi_do_vazio.png"],
+        "tags": ["pixel art","pc","action","retro"],
+        "play": "disable"
+        }
+];
 
 function tagsGenerate(numIDGame) {
     "use strict";
@@ -123,17 +137,28 @@ function dotsGenerate(numIDGame){
     "use strict";    
     $('#dots-show').empty();
     
-    document.getElementById("dots-show").innerHTML += '<span class="dot active" onclick="currentSlide(' + 1 + ')"></span>';
+    document.getElementById("dots-show").innerHTML = '<span class="dot active" onclick="currentSlide(1)"></span>';
     
     for(var i = 2; i <= games[numIDGame].images.length; i++){
         document.getElementById("dots-show").innerHTML += '<span class="dot" onclick="currentSlide(' + i + ')"></span>';
     }
 }
 
+function buttonGenerate(numIDGame) {
+    "use strict";
+    var play = $('#play');
+    if(games[numIDGame].play == "disable"){
+        play.addClass("disable-play-btn");
+        play.removeAttr("href");
+    }else
+        play.removeClass("disable-play-btn");
+}
+
 function windowInfo(gameID) {
     "use strict";
     imageGenerate(gameID);
     dotsGenerate(gameID);
+    buttonGenerate(gameID);
     document.getElementById("game-title").innerHTML = games[gameID].name;
     document.getElementById("game-brief").innerHTML = games[gameID].brief;
     document.getElementById("game-tags").innerHTML = tagsGenerate(gameID);
@@ -141,11 +166,10 @@ function windowInfo(gameID) {
 }
 
 
-//SETTING THE INFO
+//SETTING THE INFORMATION ON THE WINDOW
 $(document).on("click", ".game-id li a", function () {
     windowInfo($(this).parent().attr("value"));
 });
-
 
 
 var slideIndex = 1;

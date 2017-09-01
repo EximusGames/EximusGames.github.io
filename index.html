@@ -23,7 +23,7 @@
 
         <span onclick="openNav()" id="menu-button"><i class="fa fa-bars"></i></span>
 
-        <!-- EFEMERO WINDOW -->
+        <!-- GAME WINDOW -->
         <div id="card-more" class="overlay">
             <div id="clickOutSide" onclick="closeWindow()"></div>
             <div class="modal">
@@ -32,7 +32,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">                    
                         <div class="slideshow-container" id="slideshow">
                             
-                          <!--IMAGE 1-->
+                          <!--IMAGES-->
                           <div id="image-show"></div>
 
                           <!--ARROWS-->       
@@ -40,7 +40,7 @@
                           <a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-right"></i></a>
                         
                           <!--DOTS-->   
-                          <div class="dots"id="dots-show">
+                          <div class="dots" id="dots-show">
                           </div>
                         </div>
                     </div>
@@ -51,8 +51,9 @@
                         <p id="game-brief">Descrição</p>
                         <div id="game-tags">Tags</div>
                     </div>
-                        
-                    <a class="play-link" href="https://gamejolt.com/@Eximus-Games" target="_blank">Jogar agora</a>                    
+                    
+                    <!--PLAY BUTTON-->
+                    <a class="play-link" id="play" href="https://gamejolt.com/@Eximus-Games" target="_blank">Jogar agora</a>                    
                 </div>    
             </div>
             </div>
@@ -82,6 +83,8 @@
 
                         <!--ICON ROW 1-->
                         <div class="row center-xs center-sm center-md middle-lg">
+                            
+                            <!--EFÊMERO-->
                             <div id="card-efemero" class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card">
                             <img src="images/jogos/efemero.jpg">
                             <h4>Efêmero</h4>
@@ -94,14 +97,30 @@
                             <ul class="game-id">
                                 <li value="0"><a class="button-play">Saiba mais</a></li>    
                             </ul>
-
                             </div>
-                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
+                            
+                            <!--HERÓI DO VAZIO-->
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card">
                             <img src="images/jogos/heroi_do_vazio.png"><br>
                             <h4>Herói do Vazio</h4>
-                            <p>Em desenvolvimento.</p>
+                            <p>Iniciando Projeto Cibele</p>
+                            <h6>pixel art</h6>
+                            <h6>action</h6>
+                            <h6>retro</h6>
+                            <h6>pc</h6>
+                            <br><br>
                             <ul class="game-id">
-                                <li value="1"><a class="button-play button-disable">Em breve</a></li>    
+                                <li value="1"><a class="button-play">Saiba Mais</a></li>    
+                            </ul>
+                            </div>
+                            
+                            <!--RAMPAGE??-->
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
+                            <img src="images/jogos/heroi_do_vazio.png"><br>
+                            <h4>?????</h4>
+                            <p>??????</p>
+                            <ul class="game-id">
+                                <li><a class="button-play button-disable">EM BREVE</a></li>    
                             </ul>
                             </div>
                         </div>

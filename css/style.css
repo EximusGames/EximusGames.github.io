@@ -413,6 +413,11 @@ img{
     border-radius: 0 0 4px 4px;
 }
 
+.overlay .disable-play-btn{
+    background: #191a19;
+    cursor: not-allowed;
+}
+
 /*SLIDESHOW*/
 .slideshow-container {
     max-width: 100%;
