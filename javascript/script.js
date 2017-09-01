@@ -109,7 +109,7 @@ var games = [{
         "name": "Herói Do Vazio",
         "brief": "Demétrio é um agente renomado da Êxodo, uma instituição governamental de proteção à Via Láctea. Ele é enviado em uma importante missão para impedir que uma fissura de uma dimensão paralela corrompa e destrua o Sistema Solar de uma vez por todas.",
         "images": [
-            "images/jogos/heroi_do_vazio.png"],
+            "images/jogos/heroi_do_vazio.jpg"],
         "tags": ["pixel art","pc","action","retro"],
         "play": "disable"
         }
