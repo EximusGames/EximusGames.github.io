@@ -96,7 +96,7 @@ function closeWindow() {
 
 //Game list Request
 var gameJsonRequest = new XMLHttpRequest();
-gameJsonRequest.open('GET','');
+gameJsonRequest.open('GET','EximusGames.github.io/json/games.json');
 var games = JSON.parse(gameJsonRequest.responseText);
 
 
