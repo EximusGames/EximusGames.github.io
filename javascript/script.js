@@ -107,7 +107,7 @@ var games = [{
         },
         {
         "name": "Herói Do Vazio",
-        "brief": "Demétrio é um agente renomado da Gêness, uma instituição governamental de proteção à Via Láctea. Ele é enviado em uma importante missão para impedir que uma fissura de uma dimensão paralela corrompa e destrua o Sistema Solar de uma vez por todas.",
+        "brief": "Demétrio é um agente renomado da Gênesis, uma instituição governamental de proteção à Via Láctea. Ele é enviado em uma importante missão para impedir que uma fissura de uma dimensão paralela corrompa e destrua o Sistema Solar de uma vez por todas.",
         "images": [
             "images/jogos/heroi_do_vazio.png"],
         "tags": ["pixel art","pc","action","retro"],
