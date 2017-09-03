@@ -102,16 +102,18 @@ var games = [{
             "images/jogos/efemero.jpg",
             "images/jogos/efemero-start.jpg", "images/jogos/efemero-deck.jpg"],
         "tags": ["Drama","pixel art","psicológico","pc"],
-        "play": "disable",
-        "url": "https://gamejolt.com/@Eximus-Games"
+        "play": "enable",
+        "crowdfunding": "off",
+        "url": "https://gamejolt.com/games/efemero/281230"
         },
         {
         "name": "Herói Do Vazio",
         "brief": "Demétrio é um agente renomado da Gênesis, uma instituição governamental de proteção à Via Láctea. Ele é enviado em uma importante missão para impedir que uma fissura de uma dimensão paralela corrompa e destrua o Sistema Solar de uma vez por todas.",
         "images": [
             "images/jogos/heroi_do_vazio.png"],
-        "tags": ["pixel art","pc","action","retro"],
-        "play": "disable"
+        "tags": ["pixel art","action","retro","pc"],
+        "play": "disable",
+        "crowdfunding": "off"
         }
 ];
 
@@ -148,12 +150,27 @@ function dotsGenerate(numIDGame){
 function buttonGenerate(numIDGame) {
     "use strict";
     var play = $('#play');
+    var crowndfund = $('#crowndfund');
+    
     if(games[numIDGame].play == "disable"){
         play.addClass("disable-play-btn");
         play.removeAttr("href");
-        document.getElementById("play").innerHTML = "EM BREVE";
-    }else{
+        play.removeClass("enable-crowdfunding play-btn");
+        crowndfund.addClass("disable-btn");
+        document.getElementById("play").innerHTML = "Em Breve";
+        
+    }else if(games[numIDGame].play == "enable" && games[numIDGame].crowdfunding == "on"){
+        play.addClass("enable-crowdfunding play-btn");
         play.removeClass("disable-play-btn");
+        document.getElementById("play").innerHTML = "jogar agora";
+        document.getElementById("play").href = games[numIDGame].url;
+        crowndfund.removeClass("disable-btn");
+        crowndfund.addClass("enable-crowdfunding crowdfund-btn");        
+    }else{
+        
+        crowndfund.addClass("disable-btn");
+        play.removeClass("disable-play-btn");
+        document.getElementById("play").innerHTML = "Jogar agora";
         document.getElementById("play").href = games[numIDGame].url;
     }
 }

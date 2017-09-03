@@ -29,7 +29,9 @@
             <div class="modal">
             <div class="close-btn" onclick="closeWindow()"><i class="fa fa-times"></i></div>
                 <div class="row center-xs center-sm center-md center-lg middle-lg middle-md">
+                <a class="play-link disable-btn" id="crowndfund" href="" target="_blank">Patrocinar</a>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">                    
+                        
                         <div class="slideshow-container" id="slideshow">
                             
                           <!--IMAGES-->
@@ -53,7 +55,7 @@
                     </div>
                     
                     <!--PLAY BUTTON-->
-                    <a class="play-link" id="play" href="" target="_blank">Jogar agora</a>                    
+                    <a class="play-link" id="play" href="" target="_blank">Jogar agora</a>
                 </div>    
             </div>
             </div>
@@ -66,6 +68,7 @@
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-7 showcase-content">
                         <img src="images/Eximus.svg" alt="Eximus Game Dev" id="logo">
                     </div>
+                    
                 </div>
                 <div class="row center-xs">
                     <i class="fa fa-chevron-down down-arrow bounce"></i>
@@ -79,9 +82,6 @@
             <div class="row center-xs center-sm center-md center-lg">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h2>Jogos</h2>
-                    <p></p>
-
-                        <!--ICON ROW 1-->
                         <div class="row center-xs center-sm center-md middle-lg">
                             
                             <!--EFÊMERO-->
@@ -242,7 +242,22 @@
             <div class="row center-xs center-sm center-md center-lg">
                 <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12">
                     <h2>Fale Conosco</h2>
+                    <h3><a href="http://www.facebook.com/EximusGames"><i class="fa fa-facebook-official"></i>Eximus Games</a></h3>
                     <h3><i class="fa fa-envelope"></i> support@eximusgames.com</h3> 
+                    
+                    
+                    <!-- FACEBOOK LIKE AND SHARE -->
+                    <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                    
+                    <div class="fb-like" data-href="https://web.facebook.com/EximusGames" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+                    
                     <p>Copyright &copy; 2017 | Eximus Games</p>
                 </div>
             </div>

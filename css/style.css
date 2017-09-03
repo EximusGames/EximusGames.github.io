@@ -148,7 +148,7 @@ img{
     font-weight: 700;
     color: #818181;
     display: block;
-    transition: 0.5s
+    transition: 0.5s;
 }
 
 
@@ -253,6 +253,13 @@ img{
     border-radius: 4px;
     display: inline;
     padding: 6px 8px;
+    transition: all .3s ease-in-out;
+}
+
+#games h6:hover{
+    background: #161716;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
 #games p{
@@ -292,6 +299,12 @@ img{
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 800;
+    transition: all 300ms ease-in-out;
+}
+
+#games a.button-play:hover{
+    background: #e2e2e2;
+    transition: all 300ms ease-in-out;
 }
 
 #games .card img{
@@ -313,6 +326,10 @@ img{
 #games a.button-disable{
     background: #434343;
     cursor: not-allowed;
+}
+
+#games a.button-disable:hover{
+    background: #4e4e4e;
 }
 
 #games ul{
@@ -365,6 +382,7 @@ img{
     color: inherit;
     opacity: 0.5;
     transition: all 300ms ease-in-out;
+    z-index: 5;
 }
 
 .overlay .close-btn:hover{
@@ -398,11 +416,18 @@ img{
     border-radius: 4px;
     display: inline;
     padding: 4px 7px;
+    transition: all .3s ease-in-out;
+}
+
+.overlay h6:hover{
+    background: #242624;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
 .overlay .play-link{
     width: 110%;
-    background: #318140;
+    background: #306d3a;
     padding: 15px;
     text-decoration: none;
     text-transform: uppercase;
@@ -411,11 +436,37 @@ img{
     text-align: center;
     margin: 20px -14px -32px -14px;
     border-radius: 0 0 4px 4px;
+    transition: all 300ms ease-in-out;
+}
+
+.overlay .play-link:hover{
+    background: #41af55;
+    margin: 20px -14px -32px -14px;
+    transition: all 200ms ease-in-out;
+}
+
+.overlay .enable-crowdfunding{
+}
+
+.overlay .crowdfund-btn{
+    background: #121212;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 4px 4px 0 0;
 }
 
 .overlay .disable-play-btn{
-    background: #191a19;
+    background: #101010;
     cursor: not-allowed;
+}
+
+.overlay .disable-play-btn:hover{
+    background: #191a19;
+}
+
+.overlay .disable-btn{
+    display: none;
 }
 
 /*SLIDESHOW*/
@@ -691,6 +742,21 @@ img{
     margin: auto;
 }
 
+#main-footer a{
+    color: #888;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+#main-footer a:hover{
+    color: #dbdbdb;
+    transition: all 0.4s ease-in-out;  
+}
+
+#main-footer i{
+    padding-right: 5px;
+}
+
 #main-footer p{
     margin-top: 5px;
     color: #666;
@@ -729,14 +795,18 @@ img{
         padding: 2px 4px;
     }
     
+      
+    
     .overlay .play-link{
-        background: #318140;
         padding: 5px;
         color: inherit;
-        margin: 5px -14px -32px -14px;
-        
     }
     
+    .overlay .crowdfund-btn{
+        margin-bottom: -5px;
+        padding: 2px;
+        font-size: 13px;
+    } 
     #team .ch-info h3 {
 	font-size: 13px;
 	margin: 50px 10px 0px 10px;
