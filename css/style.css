@@ -711,7 +711,6 @@ img{
     margin: 5px auto;
 }
 
-
 .links i{ 
     color: #dbdbdb;
     margin: 0 3px;
@@ -720,6 +719,16 @@ img{
 
 .links a:hover{ 
     color: white;
+}
+
+.artstation{
+    display: inline-block;
+} 
+
+.artstation img{
+    padding-left: 1px;
+    height: 18px;
+    width: 20px;
 }
 
 /* FOOTER */
@@ -795,8 +804,6 @@ img{
         padding: 2px 4px;
     }
     
-      
-    
     .overlay .play-link{
         padding: 5px;
         color: inherit;
@@ -807,6 +814,7 @@ img{
         padding: 2px;
         font-size: 13px;
     } 
+    
     #team .ch-info h3 {
 	font-size: 13px;
 	margin: 50px 10px 0px 10px;
@@ -817,6 +825,12 @@ img{
     
     #team .links i{
         font-size: 30px;
+    }
+    
+    .artstation img{
+        padding-left: 2px;
+        height: 22px;
+        width: 25px;
     }
     
     #main-fotter h3{
