@@ -101,9 +101,9 @@ var games = [{
         "images": [
             "images/jogos/efemero.jpg",
             "images/jogos/efemero-start.jpg", "images/jogos/efemero-deck.jpg"],
-        "tags": ["Drama","pixel art","psicológico","pc"],
+        "tags": ["Drama","pixel art","psicológico"],
+        "devices": "fa fa-windows",
         "play": "enable",
-        "crowdfunding": "off",
         "url": "https://gamejolt.com/games/efemero/281230"
         },
         {
@@ -111,9 +111,9 @@ var games = [{
         "brief": "Demétrio é um agente renomado da Gênesis, uma instituição governamental de proteção à Via Láctea. Ele é enviado em uma importante missão para impedir que uma fissura de uma dimensão paralela corrompa e destrua o Sistema Solar de uma vez por todas.",
         "images": [
             "images/jogos/heroi_do_vazio.png"],
-        "tags": ["pixel art","action","retro","pc"],
+        "tags": ["pixel art","action","retro"],
+        "devices": "fa fa-windows",
         "play": "disable",
-        "crowdfunding": "off"
         }
 ];
 
@@ -175,11 +175,17 @@ function buttonGenerate(numIDGame) {
     }
 }
 
+function devicesGenerate(numIDGame){
+    'use strict';
+    document.getElementById("devices-enables").innerHTML = '<i class="' + games[numIDGame].devices + '"> </i>';
+}
+
 function windowInfo(gameID) {
     "use strict";
     imageGenerate(gameID);
     dotsGenerate(gameID);
     buttonGenerate(gameID);
+    devicesGenerate(gameID);
     document.getElementById("game-title").innerHTML = games[gameID].name;
     document.getElementById("game-brief").innerHTML = games[gameID].brief;
     document.getElementById("game-tags").innerHTML = tagsGenerate(gameID);

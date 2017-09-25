@@ -107,12 +107,6 @@ img{
     margin: auto;
 }
 
-/* COMMON CLASSES */
-.highlight{
-    color: #F68657;
-}
-
-
 /* MENU */
 #menu-button{
     position: fixed;
@@ -281,20 +275,19 @@ img{
     box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
     border-radius: 5px;
     padding: 0;
-    padding-bottom: 20px;
     opacity: 0;
     transform: translateX(-20px);
     transition: all .3s ease-in-out;
 }
 
-#games a.button-play{
-    background: #a8a8a8;
-    font-size: 12px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid rgba(255,255,255,0.05);
-    margin-bottom: 20px;
-    color: #1F2124;
+#games .Learn-more{
+    width: 100%;
+    background: #0f0e0e;
+    color: #E0E3DA;
+    font-size: 14px;
+    padding: 8px 0;
+    margin: -10px 0 0 0;
+    border-radius: 0 0 5px 5px;
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
@@ -302,39 +295,38 @@ img{
     transition: all 300ms ease-in-out;
 }
 
-#games a.button-play:hover{
-    background: #e2e2e2;
+#games .Learn-more:hover{
+    background: #161716;
+    color: #E0E3DA;
     transition: all 300ms ease-in-out;
 }
 
 #games .card img{
     -webkit-filter: grayscale(100%);
     filter: grayscale(30%);
-    color: red;
 }
 
-#games .disable-card{
+#games .Disable-learn-more{
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    color: red;
 }
 
-#games .disable-card img{
+#games .Disable-learn-more img{
     opacity: 0.5;
 }
 
-#games a.button-disable{
-    background: #434343;
+#games .Disable-learn-more{
+    background: #161716;
     cursor: not-allowed;
 }
 
-#games a.button-disable:hover{
-    background: #4e4e4e;
+#games .Disable-learn-more:hover{
+    background: #1c1c1c;
 }
 
 #games ul{
     padding: 0;
-    margin: 0;
+    margin: 0;    
 }
 
 #games li{
@@ -407,6 +399,23 @@ img{
     border-radius: 2px;
 }
 
+.overlay #devices-enables{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px 0;
+}
+
+.overlay #devices-enables i{
+    font-size: 22px;
+    transition: all 300ms ease-in-out;
+}
+
+.overlay #devices-enables i:hover{
+    font-size: 22px;
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
 .overlay h6{
     font-size: 11px;
     margin: 0 3px;
@@ -426,26 +435,22 @@ img{
 }
 
 .overlay .play-link{
-    width: 110%;
+    width: 100%;
     background: #306d3a;
-    padding: 15px;
+    padding: 15px 22px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
     color: inherit;
     text-align: center;
-    margin: 20px -14px -32px -14px;
+    margin: 20px -50px -30px -50px;
     border-radius: 0 0 4px 4px;
     transition: all 300ms ease-in-out;
 }
 
 .overlay .play-link:hover{
     background: #41af55;
-    margin: 20px -14px -32px -14px;
     transition: all 200ms ease-in-out;
-}
-
-.overlay .enable-crowdfunding{
 }
 
 .overlay .crowdfund-btn{
@@ -799,13 +804,30 @@ img{
         font-size: .8em;
     }
     
+    .overlay #devices-enables{
+        margin-bottom: -5px;
+        margin-top: -5px;
+    }
+    
+    .overlay #devices-enables i{
+        font-size: 18px;
+    }
+
+    .overlay #devices-enables i:hover{
+        font-size: 18px;
+    }
+    
+    #game-tags{
+        margin-bottom: -10px;
+    }
+    
     .overlay h6{
         font-size: 8px;
-        padding: 2px 4px;
+        line-height: 1px;
     }
     
     .overlay .play-link{
-        padding: 5px;
+        padding: 5px 22px;
         color: inherit;
     }
     
@@ -813,7 +835,7 @@ img{
         margin-bottom: -5px;
         padding: 2px;
         font-size: 13px;
-    } 
+    }
     
     #team .ch-info h3 {
 	font-size: 13px;
