@@ -139,7 +139,7 @@ var games = [{
         "play": "disable",
         },
         {"name": "Arcade Eximus",
-        "brief": "<span id='winner'>Jogo ganhador da 2ª DBR Game Jam.</span><br> O jogo apresenta uma coletânea de minigames retros aonde você tem que defender a cidade de uma orda de orcs furiosos, lutar pela sua vida enquanto corre de zumbis em uma cidade abandonada e ajudar os pobres matando os guardas e roubando o tesouro do rei.<br>",
+        "brief": "O jogo apresenta uma coletânea de minigames retros aonde você tem que defender a cidade de uma orda de orcs furiosos, lutar pela sua vida enquanto corre de zumbis em uma cidade abandonada e ajudar os pobres matando os guardas e roubando o tesouro do rei.<br>",
         "images": [
             "images/jogos/arcade_eximus_2.jpg",
             "images/jogos/witcherwall.jpg",
