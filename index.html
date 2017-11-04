@@ -51,7 +51,13 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> 
                         <h2 id="game-title">Nome</h2>
                         <p id="game-brief">Descrição</p>
-                        <div id="devices-enables"></div>
+                        <div id="addon">
+                            <div id="content-describe">
+                                <span id="describe-window">DESCRIBE</span>
+                            </div>
+                            <span id="age-restriction">16</span>
+                            <span id="devices-enables">Dispositivo</span>
+                        </div>
                         <div id="game-tags">Tags</div>
                     </div>
                     
@@ -87,7 +93,10 @@
                             
                             <!--EFÊMERO  id="card-efemero"-->
                             <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card">
-                            <img src="images/jogos/efemero.jpg">
+                            <div class="warning">
+                                <span class="age-limit red-label">16</span>
+                            </div>
+                            <img src="images/jogos/efemero.jpg">                            
                             <h4>Efêmero</h4>
                             <p>A vida é curta, o tempo passa rápido, sentimentos são passageiros e tudo isso é Efêmero.</p>
                             <h6>Pixel Art</h6>
@@ -99,9 +108,34 @@
                             </ul>
                             </div>
                             
+                            <!--ARCADE EXIMUS-->
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card">
+                            <div class="warning">
+                                <h3 class="limited-edition"><i class="fa fa-clock-o"></i> Limitado</h3>
+                                <span class="age-limit orange-label">14</span>
+                            </div>
+                                <h5 id="describe-limited">
+                                    <i class="fa fa-caret-up arrow-up" id="arrow-up"></i>
+                                    Disponível até dia 10 de Novembro
+                                </h5>
+                            <img src="images/jogos/arcade_eximus.jpg"><br>
+                            <h4>Arcade Eximus</h4>
+                            <p>Defenda uma cidade, mate zumbis, assalte um castelo e viaje no tempo com nossa máquina de fliperama!</p>
+                            <h6>arcade</h6>
+                            <h6>pixel art</h6>
+                            <h6>game jam</h6>
+                            <br><br>
+                            <ul class="game-id">
+                                <li value="2"><a><div class="Learn-more">Saiba mais</div></a></li>    
+                            </ul>
+                            </div>
+
                             <!--HERÓI DO VAZIO-->
                             <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
-                            <img src="images/jogos/heroi_do_vazio.png"><br>
+                            <div class="warning">
+                                <span class="age-limit red-label">16</span>
+                            </div>                            
+                            <img src="images/jogos/heroi_do_vazio.jpg"><br>
                             <h4>Herói do Vazio</h4>
                             <p>Iniciando Projeto Cibele...</p>
                             <h6>pixel art</h6>
@@ -112,14 +146,16 @@
                                 <li value="1"><a><div class="Learn-more">Saiba mais</div></a></li>    
                             </ul>
                             </div>
-                            
-                            <!--RAMPAGE??-->
+
+                            <!--¿¿DIE??-->
                             <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
-                            <br>
-                            <h4>DBR Game Jam</h4>
-                            <p>Pixel, Pixel every where</p>
+                            <div class="warning">
+                                <span class="age-limit black-label">18</span>
+                            </div>  
+                            <h4>192</h4>
+                            <p>"192, como posso ajudar?"</p>
                             <ul class="game-id">
-                                <li><a><div class="Learn-more Disable-learn-more">Em breve</div></a></li>    
+                               <li><a><div class="Learn-more Disable-learn-more">Em breve</div></a></li>    
                             </ul>
                             </div>
                         </div>
