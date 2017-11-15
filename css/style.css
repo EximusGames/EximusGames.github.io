@@ -453,7 +453,7 @@ img{
     transition: opacity 250ms ease-in-out;
 }
 
-#clickOutSide{
+.overlay #clickOutSide{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -483,60 +483,28 @@ img{
     opacity: 1;
 }
 
-.overlay #addon{
-    display: flex;
-    justify-content: center;
-    padding: 0 0 15px 0;
-}
-
-.overlay #age-restriction{
-    filter: grayscale(30%);
-    background: #f44242;
+.overlay #learn-more{
+    transform: translateY(25%);
     cursor: pointer;
-    color: white;
-    font-size: 13px;
+    color: rgb(77, 77, 77);
     text-transform: uppercase;
     font-weight: 700;
-    padding: 0 6px 0 5px;
-    margin-right: 10px;
-    border-radius: 5px;
-    transition: all 300ms ease-in-out;
+    font-size: 15px;
+    margin-bottom: -20px;
+    transform: translateY(-30%);
+    transition: all .3s ease-in-out;
 }
 
-.overlay #age-restriction:hover{
-    filter: grayscale(0%);
-    padding: 0 10px;
-    transition: all 300ms ease-in-out;
+.overlay #learn-more-p:hover{
+    color: #E0E3DA;
+    transition: all .3s ease-in-out;
 }
 
-.overlay #devices-enables i{
-    font-size: 22px;
-    transition: all 300ms ease-in-out;
-}
-
-.overlay #devices-enables i:hover{
-    font-size: 22px;
-    color: white;
-    transition: all 300ms ease-in-out;
-}
-
-.overlay #content-describe{
-    position: absolute;
-    margin-top: -30px;
-}
-
-.overlay #describe-window{
-    position: relative;
-    line-height: 100%;
+.overlay #extra-tab{
     display: none;
-    font-size: 13px;
-    background: rgba(8, 8, 8, 0.95);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
-    border-radius: 5px; 
-    padding: 2px 5px;
 }
 
-.overlay h6{
+.overlay h6, #age-restriction{
     font-size: 11px;
     margin: 0 3px;
     text-align: center;
@@ -545,10 +513,11 @@ img{
     border-radius: 4px;
     display: inline;
     padding: 4px 7px;
+    font-weight: 700;
     transition: all .3s ease-in-out;
 }
 
-.overlay h6:hover{
+.overlay h6:hover, #age-restriction:hover{
     background: #1d1d1d;
     cursor: pointer;
     transition: all .3s ease-in-out;
@@ -572,13 +541,6 @@ img{
     transition: all 200ms ease-in-out;
 }
 
-.overlay .crowdfund-btn{
-    background: #121212;
-    margin-top: -30px;
-    margin-bottom: 20px;
-    padding: 5px;
-    border-radius: 4px 4px 0 0;
-}
 
 .overlay .disable-play-btn{
     background: #101010;
@@ -591,11 +553,6 @@ img{
 
 .overlay .disable-btn{
     display: none;
-}
-
-.overlay span{
-    font-weight: 600;
-    text-align: center; 
 }
 
 /*SLIDESHOW*/
@@ -639,7 +596,7 @@ img{
 }
 
 .prev:hover, .next:hover {
-    background: #2b2e2e;
+    background: #222222;
     opacity: 1;
 }
 
@@ -928,37 +885,28 @@ img{
         font-size: .8em;
     }
     
-    .overlay #devices-enables{
-        margin-bottom: -5px;
-        margin-top: -5px;
-    }
-    
-    .overlay #devices-enables i{
-        font-size: 18px;
-    }
-
-    .overlay #devices-enables i:hover{
-        font-size: 18px;
-    }
-    
     #game-tags{
         margin-bottom: -10px;
     }
-    
-    .overlay h6{
+
+    .overlay h6, #age-restriction{
         font-size: 8px;
-        line-height: 1px;
+        line-height: 35px;
     }
     
+    .overlay #learn-more{
+        transform: translateY(100%);
+        margin: 13px 0 25px 0;
+    }
+    
+    .overlay #learn-more-p:hover{
+        color: #E0E3DA;
+        transition: all .3s ease-in-out;
+    }
+
     .overlay .play-link{
         padding: 5px 22px;
         color: inherit;
-    }
-    
-    .overlay .crowdfund-btn{
-        margin-bottom: -5px;
-        padding: 2px;
-        font-size: 13px;
     }
     
     #team .ch-info h3 {
@@ -984,10 +932,7 @@ img{
     }
 }
 
-@media screen 
-    and (device-width: 320px) 
-    and (device-height: 640px) 
-    and (orientation: portrait) {
+@media screen and (device-width: 320px) and (device-height: 640px) and (orientation: portrait) {
         body {height: 100%;
       }
 }
