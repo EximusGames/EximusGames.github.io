@@ -140,7 +140,7 @@ var games = [{
         },
         {
         "name": "Herói Do Vazio",
-        "brief": "Demétrio is a renowned Genesis agent, a governmental protection institution of the Milky Way. He is sent on an important mission to prevent a parallel dimension's fissure from corrupting and destroying the Solar System once for all.",
+        "brief": "Demétrio is a renowned Genesis agent, a governmental protection institution of the Milky Way. He is sent on an important mission to prevent a parallel dimension's fissure from corrupting and destroying the Solar System for good.",
         "images": [
             "images/jogos/heroi_do_vazio.jpg"],
         "tags": ["windows","pixel art","action","retro"],
