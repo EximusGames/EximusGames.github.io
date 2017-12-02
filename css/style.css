@@ -205,6 +205,47 @@ img{
   animation: bounce  2s infinite;
 }
 
+/*TRANSLATE POPUP*/
+#language-popup{
+    display: inline;
+    top: -50px;
+    z-index: 1;
+    position: fixed;
+    left: 50%;
+    padding: 10px 15px;
+    line-height: 15px;
+    text-align: center;
+    background: #0f0e0e;
+    transform: translateX(-50%);
+    border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+#language-popup a, #language-popup i{
+    display: inline;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: 700;
+    color: rgb(121, 123, 118);
+    transition: all 300ms ease-in-out;    
+}
+
+#language-popup a:hover, #language-popup i:hover{
+    color: #E0E3DA;
+    transition: all 300ms ease-in-out;    
+}
+
+#language-popup #icon-link{
+    display: none;
+}
+
+#language-popup .fa-times{
+    margin-left: 5px;
+}
+
 /* GAMES */
 
 #games{
@@ -861,11 +902,24 @@ img{
 /* MEDIA QUERIES */
 @media (max-width:700px){      
     #menu-button{
-    font-size: 28px;
+        font-size: 28px;
     }
     
+    #language-popup{
+        padding: 5px 8px;
+    }
+
+    #language-popup #icon-link{
+        display: inline;
+        margin: 0;
+    }
+
+    #language-popup #text-link{
+        display: none;
+    }
+
     .overlay .modal{
-    max-width: 70%;
+        max-width: 70%;
     }
     
     .prev, .next {

@@ -112,27 +112,27 @@ function closeWindow() {
 
     //AGE RESTRICTION
     $().ready(function(){
-        $('.blue-label').hover(function(){$(this).text("10 anos");},
+        $('.blue-label').hover(function(){$(this).text("10 years old");},
                                 function(){$(this).text("10")});
-        $('.yellow-label').hover(function(){$(this).text("12 anos");},
+        $('.yellow-label').hover(function(){$(this).text("12 years old");},
                                  function(){$(this).text("12")});
-        $('.orange-label').hover(function(){$(this).text("14 anos");},
+        $('.orange-label').hover(function(){$(this).text("14 years old");},
                                  function(){$(this).text("14")});
-        $('.red-label').hover(function(){$(this).text("16 anos");},
+        $('.red-label').hover(function(){$(this).text("16 years old");},
                               function(){$(this).text("16")});
-        $('.black-label').hover(function(){$(this).text("18 anos");},
+        $('.black-label').hover(function(){$(this).text("18 years old");},
                                 function(){$(this).text("18")});
     });
 
 //GAME LIST REQUEST
 var games = [{
         "name": "Efêmero",
-        "brief": "Efêmero conta a história de um jovem que perdeu a felicidade e não encontra um propósito para seguir em frente. Sua vida se tornou monótona e nada que ele faça o faz se sentir bem e com isso ele descobre que tudo é temporário, e que apenas por um dia ele poderia mudar seu destino.",
+        "brief": "Ephemeral tells the story about a guy who lost happiness and can't find a purpose to move on. His life became monotonous and nothing that he does makes him feel better. With that, he discovers that everything is temporary and that just for one day he could change his destiny.",
         "images": [
             "images/jogos/efemero.jpg",
             "images/jogos/efemero-start.jpg",
             "images/jogos/efemero-deck.jpg"],
-        "tags": ["windows","Drama","pixel art","psicológico"],
+        "tags": ["windows","drama","pixel art","psychological"],
         "age": "16",
         "devices": "fa fa-windows",
         "play": "enable",
@@ -140,7 +140,7 @@ var games = [{
         },
         {
         "name": "Herói Do Vazio",
-        "brief": "Demétrio é um agente renomado da Gênesis, uma instituição governamental de proteção à Via Láctea. Ele é enviado em uma importante missão para impedir que uma fissura de uma dimensão paralela corrompa e destrua o Sistema Solar de uma vez por todas.",
+        "brief": "Demétrio is a renowned Genesis agent, a governmental protection institution of the Milky Way. He is sent on an important mission to prevent a parallel dimension's fissure from corrupting and destroying the Solar System once for all.",
         "images": [
             "images/jogos/heroi_do_vazio.jpg"],
         "tags": ["windows","pixel art","action","retro"],
@@ -204,16 +204,16 @@ function buttonGenerate(numIDGame) {
     if(games[numIDGame].play == "disable"){
         play.addClass("disable-play-btn");
         play.removeAttr("href");
-        document.getElementById("play").innerHTML = "Em Breve";
+        document.getElementById("play").innerHTML = "Coming Soon";
         
     }else if(games[numIDGame].play == "enable" && games[numIDGame].crowdfunding == "on"){
         play.addClass("enable-crowdfunding play-btn");
         play.removeClass("disable-play-btn");
-        document.getElementById("play").innerHTML = "jogar agora";
+        document.getElementById("play").innerHTML = "Play now";
         document.getElementById("play").href = games[numIDGame].url;     
     }else{
         play.removeClass("disable-play-btn");
-        document.getElementById("play").innerHTML = "Jogar agora";
+        document.getElementById("play").innerHTML = "Play now";
         document.getElementById("play").href = games[numIDGame].url;
     }
 }
@@ -225,9 +225,9 @@ function ageGeneration(numIDGame){
 
     //SET THE TEXT TO THE BUTTON
     if(age != "livre"){
-        document.getElementById("age-restriction").innerHTML = "Não recomendado para menores de " + age + " anos";
+        document.getElementById("age-restriction").innerHTML = "Not recommended for people under " + age + " years old";
     }else
-        document.getElementById("age-restriction").innerHTML =  "Livre para todos os publicos";
+        document.getElementById("age-restriction").innerHTML =  "Everyone can play";
 }
 
 $().ready(function(){
