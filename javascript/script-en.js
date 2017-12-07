@@ -28,9 +28,10 @@ $(window).scroll(function () {
                     "transform": "translate(0px,0px)"
                 });
             }, 300 * (i + 1));
-        });$('#language-popup').animate({top: "0px"},500, function(){});
+        });
     }
 });
+
 
 //LANDING QUOTE
 $(window).scroll(function () {
@@ -76,15 +77,6 @@ function openNav() {
 function closeNav() {
     "use strict";
     document.getElementById("mySidenav").style.width = "0";
-}
-
-//LANGUAGE POPUP
-function closePopup() {
-    "use strict";
-    $('#language-popup').css({
-        "margin-top": "-50px", 
-        "transition": "all .5s ease-in-out"
-    });
 }
 
 //GAMES LEARN MORE

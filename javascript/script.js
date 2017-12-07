@@ -28,7 +28,7 @@ $(window).scroll(function () {
                     "transform": "translate(0px,0px)"
                 });
             }, 300 * (i + 1));
-        });$('#language-popup').animate({top: "0px"},500, function(){});
+        });
     }
 });
 
@@ -79,6 +79,7 @@ function closeNav() {
 }
 
 //LANGUAGE POPUP
+$('#language-popup').animate({top: "0px"},500, function(){});
 function closePopup() {
     "use strict";
     $('#language-popup').css({
