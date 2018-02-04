@@ -5,11 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="initial-scale=1.0">
 <link rel="icon" href="images/Icon.png">
-<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700,800" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,400" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
     <body>
         <!-- MENU -->
@@ -28,44 +29,40 @@
         <div id="card-more" class="overlay">
             <div id="clickOutSide" onclick="closeWindow()"></div>
             <div class="modal">
-            <div class="close-btn" onclick="closeWindow()"><i class="fa fa-times"></i></div>
-                <div class="row center-xs center-sm center-md center-lg middle-lg middle-md">
-                <a class="play-link disable-btn" id="crowndfund" href="" target="_blank">Patrocinar</a>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">                    
+                <div class="close-btn" onclick="closeWindow()"><i class="fa fa-times"></i></div>
+                    <div class="row center-xs center-sm center-md center-lg middle-lg middle-md">
                         
-                        <div class="slideshow-container" id="slideshow">
+                         <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                                                    
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next swiper-button-white"></div>
+                            <div class="swiper-button-prev swiper-button-white"></div>
+                        </div>
+                        
+                        
+                        <!--DESCRIPTION-->   
+                        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10"> 
+                            <h2 id="game-title">Nome</h2>
+                            <p id="game-brief">Descrição</p>
                             
-                          <!--IMAGES-->
-                          <div id="image-show"></div>
+                            <div id="learn-more">
+                                <p id="learn-more-p">Detalhes<br>
+                            </div>
 
-                          <!--ARROWS-->       
-                          <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left"></i></a>
-                          <a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-right"></i></a>
+                            <div id="extra-tab">
+                                <div id="game-tags">Tags</div>
+                                <span id="age-restriction">XX anos</span>
+                            </div>                   
+                        </div>                    
+                        <!--PLAY BUTTON-->
+                        <a class="play-link" id="play" href="" target="_blank">Jogar agora</a>
                         
-                          <!--DOTS-->   
-                          <div class="dots" id="dots-show">
-                          </div>
-                        </div>
-                    </div>
-                    
-                    <!--DESCRIPTION-->   
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> 
-                        <h2 id="game-title">Name</h2>
-                        <p id="game-brief">Description</p>
-                        
-                        <div id="learn-more">
-                            <p id="learn-more-p">Details<br>
-                        </div>
-
-                        <div id="extra-tab">
-                            <div id="game-tags">Tags</div>
-                            <span id="age-restriction">XX years</span>
-                        </div>                   
-                    </div>
-                    <!--PLAY BUTTON-->
-                    <a class="play-link" id="play" href="" target="_blank">Play Now</a>
                 </div>    
-            </div>
             </div>
         </div>
 
@@ -149,7 +146,7 @@
             <div class="row center-xs center-sm center-md center-lg">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <h2>About us</h2>
-                        <div class="row center-xs center-sm center-md middle-lg"><p>Eximus is an upcoming game company created in 2016 by a group of college friends who shared the the dream of creating games for mobiles, computers, and consoles.
+                        <div class="row center-xs center-sm center-md middle-lg"><p>Eximus is an upcoming game company created in 2016 by a group of college friends who shared the dream of creating games for mobiles, computers, and consoles.
                         <br><br>
                         The team consists of five members, each individually working on the specialization and development of their own respective games.
                         <br>
@@ -286,5 +283,6 @@
         </footer>
 	</body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.js"></script>
     <script src="javascript/script-en.js"></script>
 </html>

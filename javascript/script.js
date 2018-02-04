@@ -176,26 +176,24 @@ function tagsGenerate(numIDGame) {
 
 //SET THE IMAGES
 function imageGenerate(numIDGame){
-    "use strict";    
-    $('#image-show').empty();
-    
-    document.getElementById("image-show").innerHTML = '<div class="mySlides fade" style="display: block;" ><img id="slideshow-image-1" src="' + games[numIDGame].images[0] +'"></div>';
-    for(var i = 2; i <= games[numIDGame].images.length; i++){
-        document.getElementById("image-show").innerHTML += '<div class="mySlides fade"><img id="slideshow-image-' + i + '" src="'+ games[numIDGame].images[i-1] +'"></div>';    
+    swiper.removeAllSlides();
+    for(var i = 0; i < games[numIDGame].images.length; i++){
+        swiper.appendSlide('<div class="swiper-slide"><img src="' + games[numIDGame].images[i] +'"></div>')    
     }
 }
 
-//SET THE NUMBER OF DOTS
-function dotsGenerate(numIDGame){
-    "use strict";    
-    $('#dots-show').empty();
-    
-    document.getElementById("dots-show").innerHTML = '<span class="dot active" onclick="currentSlide(1)"></span>';
-    
-    for(var i = 2; i <= games[numIDGame].images.length; i++){
-        document.getElementById("dots-show").innerHTML += '<span class="dot" onclick="currentSlide(' + i + ')"></span>';
-    }
-}
+//SET SWIPER
+var swiper = new Swiper('.swiper-container', {
+    grabCursor: true,
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+    },  
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
 //SET THE STATUS OF THE BUTTONS
 function buttonGenerate(numIDGame) {
@@ -237,7 +235,7 @@ $().ready(function(){
 });
 
 
-//SET FADE ON BUTTON LEAR MORE 
+//SET FADE ON BUTTON LEARN MORE 
 $('#learn-more').click(function() {
     if($('#extra-tab').css('display') == 'none'){
         $('#extra-tab').slideDown("slow");
@@ -251,7 +249,6 @@ $('#learn-more').click(function() {
 function windowInfo(gameID) {
     "use strict";
     imageGenerate(gameID);
-    dotsGenerate(gameID);
     buttonGenerate(gameID);
     ageGeneration(gameID);
     document.getElementById("game-title").innerHTML = games[gameID].name;
@@ -264,35 +261,3 @@ function windowInfo(gameID) {
 $(document).on("click", ".game-id li a", function () {
     windowInfo($(this).parent().attr("value"));
 });
-
-//SLIDE CONFIG
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    "use strict";
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    "use strict";
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    "use strict";
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1; }
-    if (n < 1) {slideIndex = slides.length; }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
-  

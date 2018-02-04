@@ -272,7 +272,6 @@ img{
 
 #games img{
     border-radius: 5px 5px 0 0;
-    border-bottom: 1px solid #575757;
 }
 
 #games h4{
@@ -309,7 +308,7 @@ img{
 }
 
 #games .card{
-    background: #1c1c1c;
+    background: #161716;
     margin: 10px;
     -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
@@ -323,7 +322,7 @@ img{
 
 #games .Learn-more{
     width: 100%;
-    background: #0f0e0e;
+    background: #0b0b0b;
     color: #E0E3DA;
     font-size: 14px;
     padding: 8px 0;
@@ -337,7 +336,7 @@ img{
 }
 
 #games .Learn-more:hover{
-    background: #161716;
+    background: #101010;
     color: #E0E3DA;
     transition: all 300ms ease-in-out;
 }
@@ -357,12 +356,12 @@ img{
 }
 
 #games .Disable-learn-more{
-    background: #161716;
+    background: #0f0e0e;
     cursor: not-allowed;
 }
 
 #games .Disable-learn-more:hover{
-    background: #1c1c1c;
+    background: #111;
 }
 
 #games ul{
@@ -480,8 +479,6 @@ img{
 /* WINDOW */
 .overlay{
     z-index: 3;
-    margin: 0;
-    padding: 0;
     position: fixed;
     background: rgba(0,0,0,0.5);
     height: 100%;
@@ -500,14 +497,54 @@ img{
     height: 100%;
 }
 
+.overlay .swiper-container {
+    width: 100%;
+    height: 35vh;
+    border-radius: 6px;
+}
+
+.overlay .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #1F2124;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+.overlay .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #E0E3DA;
+    opacity: 0.2;
+}
+
+.overlay .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #E0E3DA;
+}
+
 .overlay .modal{
     position: relative;
-    max-width: 60%;
-    background: #222222;
-    padding: 30px;
-    border-radius: 4px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, .6);
+    background:rgb(24, 24, 24);
+    max-width: 50%;
+    padding: 0 8px;
+    border-radius: 6px;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, .4);
 }
+
 .overlay .close-btn{
     position: absolute;
     text-align: center;
@@ -564,37 +601,94 @@ img{
     transition: all .3s ease-in-out;
 }
 
+#game-brief{
+    margin: 0 20px;
+}
+
 .overlay .play-link{
     width: 100%;
-    background: #306d3a;
-    padding: 15px 22px;
+    background: linear-gradient(90deg,#356f3f,#41af55);
+    padding: 15px 0;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
     color: inherit;
     text-align: center;
-    margin: 20px -50px -30px -50px;
-    border-radius: 0 0 4px 4px;
+    margin: 5px -50px 0 -50px;
+    border-radius: 0 0 6px 6px;
+    /*GRADIENT*/
+    position: relative;
+    background-image: linear-gradient(90deg,#356f3f,#41af55);
+    background-image: -moz-linear-gradient(90deg, #356f3f, #41af55);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#41af55), to(#41af55));
+    background-image: -webkit-linear-gradient(90deg, #356f3f, #41af55);
+    background-image: -o-linear-gradient(90deg, #356f3f #41af55);
+    background-image: linear-gradient(to bottom, #408e4e, #41af55);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff50abdf', endColorstr='#ff1f78aa', GradientType=0);
+    background-repeat: repeat-y;
+    background-size: 100% 90px;
+    background-position: 0 -30px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+         transition: all 0.2s linear;
 }
 
 .overlay .play-link:hover{
-    background: #41af55;
-    transition: all 200ms ease-in-out;
+    position: relative;
+    background-image: linear-gradient(90deg,#356f3f,#41af55);
+    background-image: -moz-linear-gradient(90deg, #356f3f, #41af55);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#41af55), to(#41af55));
+    background-image: -webkit-linear-gradient(90deg, #356f3f, #41af55);
+    background-image: -o-linear-gradient(90deg, #356f3f #41af55);
+    background-image: linear-gradient(to bottom, #356f3f, #41af55);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff50abdf', endColorstr='#ff1f78aa', GradientType=0);
+    background-size: 100% 90px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+         transition: all 0.2s linear;
+    background-position: 0 0;
 }
 
 
 .overlay .disable-play-btn{
-    background: #101010;
     cursor: not-allowed;
+    position: relative;
+    background-image: linear-gradient(90deg,#0a0a0a,#101010);
+    background-image: -moz-linear-gradient(90deg, #0a0a0a, #101010);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#101010), to(#101010));
+    background-image: -webkit-linear-gradient(90deg, #0a0a0a, #101010);
+    background-image: -o-linear-gradient(90deg, #0a0a0a #101010);
+    background-image: linear-gradient(to bottom, #0a0a0a, #101010);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff50abdf', endColorstr='#ff1f78aa', GradientType=0);
+    background-repeat: repeat-y;
+    background-size: 100% 90px;
+    background-position: 0 -30px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+         transition: all 0.2s linear;
 }
 
 .overlay .disable-play-btn:hover{
-    background: #191a19;
+    position: relative;
+    background-image: -moz-linear-gradient(90deg, #0a0a0a, #101010);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#101010), to(#101010));
+    background-image: -webkit-linear-gradient(90deg, #0a0a0a, #101010);
+    background-image: -o-linear-gradient(90deg, #0a0a0a #101010);
+    background-image: linear-gradient(to bottom, #0a0a0a, #101010);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff50abdf', endColorstr='#ff1f78aa', GradientType=0);
+    background-size: 100% 90px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+         transition: all 0.2s linear;
+    background-position: 0 0;
 }
 
-.overlay .disable-btn{
-    display: none;
-}
 
 /*SLIDESHOW*/
 .slideshow-container {
@@ -615,9 +709,8 @@ img{
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
     width: auto;
-    margin-top: -30px;
+    margin-top: -120px;
     padding: 10px 10px 10px 5px;
     font-weight: bold;
     font-size: 20px;
@@ -643,12 +736,13 @@ img{
 
 .dots{
    text-align: center;
+   margin-top: -35px;
 }
 
 .dot {
     cursor:pointer;
-    height: 13px;
-    width: 13px;
+    height: 10px;
+    width: 10px;
     margin: 0 2px;
     background-color: #E0E3DA;
     border-radius: 50%;
@@ -684,7 +778,7 @@ img{
 }
 
 #about h2{
-     -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .6));
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .6));
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .6));
 }
 
@@ -918,14 +1012,17 @@ img{
         display: none;
     }
 
+    #image-show img{
+        transform: translateY(0%);
+    }
+
     .overlay .modal{
-        max-width: 70%;
+        max-width: 85%;
     }
     
     .prev, .next {
-        top: 50%;
-        margin-top: -40px;
-        font-size: 35px;
+        top: 47%;
+        font-size: 25px;
     }
     
     .overlay h2{
@@ -938,13 +1035,17 @@ img{
         line-height: 120%;
         font-size: .8em;
     }
+
+    #image-show{
+        height: 25%;
+    }
     
     #game-tags{
         margin-bottom: -10px;
     }
 
     .overlay h6, #age-restriction{
-        font-size: 8px;
+        font-size: 10px;
         line-height: 35px;
     }
     
@@ -959,8 +1060,7 @@ img{
     }
 
     .overlay .play-link{
-        padding: 5px 22px;
-        color: inherit;
+        padding: 10px 0;
     }
     
     #team .ch-info h3 {
