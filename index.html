@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
 <head>
-<title>Eximus Games</title>
+<title>ΣXIMUS Games</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="initial-scale=1.0">
+<meta name="theme-color" content="#101010">
 <link rel="icon" href="images/Icon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -47,23 +48,34 @@
                         
                         <!--DESCRIPTION-->   
                         <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10"> 
-                            <h2 id="game-title">Nome</h2>
-                            <p id="game-brief">Descrição</p>
+                            <h2 id="game-title" lang="pt_BR">Nome</h2>
+                            <p id="game-brief_pt" lang="pt_BR">Descrição</p>
+                            <p id="game-brief_en" lang="en">Description</p>
                             
                             <div id="learn-more">
-                                <p id="learn-more-p">Detalhes<br>
+                                <p id="learn-more-pt" lang="pt_BR">Detalhes<br>
+                                <p id="learn-more-en" lang="en">Details<br>
                             </div>
 
                             <div id="extra-tab">
                                 <div id="game-tags">Tags</div>
-                                <span id="age-restriction">XX anos</span>
+                                <span id="age-restriction_pt" class="age-restriction" lang="pt_BR">XX anos</span>
+                                <span id="age-restriction_en" class="age-restriction" lang="en">XX years old</span>
                             </div>                   
                         </div>                    
                         <!--PLAY BUTTON-->
-                        <a class="play-link" id="play" href="" target="_blank">Jogar agora</a>
+                        <a class="play-link" id="play_pt" href="" target="_blank" lang="pt_BR">Jogar agora</a>
+                        <a class="play-link" id="play_en" href="" target="_blank" lang="en">Play now</a>
                         
                 </div>    
             </div>
+        </div>
+
+        <!-- LANGUAGE POPUP -->
+        <div id="language-popup">
+            <a id="text-popup">Can't understand a word?<br> Try the English version</a><br><br>
+            <a onclick="closePopup()" id="change-language" class="action-btn">Change now</a>
+            <a onclick="closePopup()" class="action-btn">Dispensar</a>
         </div>
 
         <!-- SHOWCASE -->
@@ -71,7 +83,7 @@
             <div class="container">
                 <div class="row row-showcase center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
                     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-7 showcase-content">
-                        <img src="images/Eximus.svg" alt="Eximus Games" id="logo">
+                        <img src="images/Eximus.svg" alt="Eximus Games" class="glitch" id="logo">
                     </div>
                     
                 </div>
@@ -81,90 +93,152 @@
             </div>
         </section>
 
-        <!-- LANGUAGE POPUP -->
-        <div id="language-popup">
-                <a href="english.html" id="text-link">Can't understand a word? Try the English version</a>
-                <a href="english.html" id="icon-link">Try in English</a>
-                <i class="fa fa-times" onclick="closePopup()"></i>
-        </div>
-
         <!-- GAMES -->
         <section id="games">
             <div class="container">
             <div class="row center-xs center-sm center-md center-lg">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2>Jogos</h2>
+                    <h2 lang="pt_BR">Jogos</h2>
+                    <h2 lang="en">Games</h2>
                         <div class="row center-xs middle-sm center-md middle-lg">
                             
                             <!--EFÊMERO  id="card-efemero"-->
                             <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card">
                             <div class="warning">
-                                <span class="age-limit red-label">16</span>
+                                <span class="age-limit red-label" lang="pt_BR">16</span>
+                                <span class="age-limit red-label" lang="en">16</span>
                             </div>
                             <img src="images/jogos/efemero.jpg">                            
                             <h4>Efêmero</h4>
-                            <p>A vida é curta, o tempo passa rápido, sentimentos são passageiros e tudo isso é Efêmero.</p>
-                            <h6>Pixel Art</h6>
-                            <h6>Drama</h6>
-                            <h6>Psicológico</h6>
-                            <br><br>
-                            <ul class="game-id">
-                                <li value="0"><a><div class="Learn-more">Saiba mais</div></a></li> 
-                            </ul>
-                            </div>
+                            <p lang="pt_BR">A vida é curta, o tempo passa rápido, sentimentos são passageiros e tudo isso é Efêmero.</p>
+                            <h6 lang="pt_BR">Pixel Art</h6>
+                            <h6 lang="pt_BR">Drama</h6>
+                            <h6 lang="pt_BR">Psicológico</h6>
+
                             
-                            <!--ARCADE EXIMUS-->
-                            <!--
-                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card">
-                            <div class="warning">
-                                <h3 class="limited-edition"><i class="fa fa-clock-o"></i> Limitado</h3>
-                                <span class="age-limit orange-label">14</span>
-                            </div>
-                                <h5 id="describe-limited">
-                                    <i class="fa fa-caret-up arrow-up" id="arrow-up"></i>
-                                    <span style="font-weight: 800;">(<span style="text-decoration: underline;">ADIADO</span>) </span> Disponível até dia 30 de Novembro
-                                </h5>
-                            <img src="images/jogos/arcade_eximus.jpg"><br>
-                            <h4>Arcade Eximus</h4>
-                            <p>Defenda uma cidade, mate zumbis, assalte um castelo e viaje no tempo com nossa máquina de fliperama!</p>
-                            <h6>arcade</h6>
-                            <h6>pixel art</h6>
-                            <h6>game jam</h6>
+                            <p lang="en">Every moment and feeling is lost within the flow of time. All is ephemeral.</p>                            
+                            <h6 lang="en">Pixel Art</h6>
+                            <h6 lang="en">Drama</h6>
+                            <h6 lang="en">psychological</h6>
+
                             <br><br>
                             <ul class="game-id">
-                                <li value="2"><a><div class="Learn-more">Saiba mais</div></a></li>    
+                                <li value="0">
+                                    <a lang="pt_BR"><div class="Learn-more">Saiba mais</div></a>
+                                    <a lang="en"><div class="Learn-more">Learn More</div></a>
+                                </li> 
                             </ul>
                             </div>
-                            -->
+
+                            <!--IDLE MAGE-->
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
+                                    <div class="warning">
+                                        <span class="age-limit blue-label" lang="pt_BR">10</span>
+                                        <span class="age-limit blue-label" lang="en">10</span>
+                                    </div>                            
+                                    <img src="images/jogos/Idle_mage.jpg"><br>
+                                    <h4 lang="pt_BR">Catching The World: Enchantress</h4>
+                                    <p lang="pt_BR">Você é um gato que foi encantado e agora tem que enfrentar monstros para sua dona, uma bruxa.</p>
+                                    <h6 lang="pt_BR">Mobile</h6>
+                                    <h6 lang="pt_BR">Ação em 3D</h6>
+        
+                                    <h4 lang="en">Catching The World: Enchantress</h4>
+                                    <p lang="en">You are a cat that has been enchanted and now has to face monsters for its owner, a witch.</p>
+                                    <h6 lang="en">Mobile</h6>
+                                    <h6 lang="en">3D action</h6>
+        
+                                    <br><br>
+                                    <ul class="game-id">
+                                        <li>
+                                            <a><div class="Learn-more Disable-learn-more" lang="pt_BR">Em breve</div></a>
+                                            <a><div class="Learn-more Disable-learn-more" lang="en">Comming soon</div></a>
+                                        </li>
+                                    </ul>
+                            </div>
 
                             <!--HERÓI DO VAZIO-->
                             <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
-                            <div class="warning">
-                                <span class="age-limit red-label">16</span>
-                            </div>                            
-                            <img src="images/jogos/heroi_do_vazio.jpg"><br>
-                            <h4>Herói do Vazio</h4>
-                            <p>Iniciando Projeto Cibele...</p>
-                            <h6>pixel art</h6>
-                            <h6>action</h6>
-                            <h6>retro</h6>
-                            <br><br>
-                            <ul class="game-id">
-                                <li value="1"><a><div class="Learn-more">Saiba mais</div></a></li>    
-                            </ul>
-                            </div>
+                                <div class="warning">
+                                    <span class="age-limit red-label" lang="pt_BR">16</span>
+                                    <span class="age-limit red-label" lang="en">16</span>
+                                </div>                            
+                                <img src="images/jogos/heroi_do_vazio.jpg"><br>
+                                <h4 lang="pt_BR">Herói do Vazio</h4>
+                                <p lang="pt_BR">Iniciando Projeto Cibele...</p>
+                                <h6 lang="pt_BR">pixel art</h6>
+                                <h6 lang="pt_BR">ação</h6>
+                                <h6 lang="pt_BR">retro</h6>
+    
+                                <h4 lang="en">Herói do Vazio</h4>
+                                <p lang="en">Starting Project Cibele...</p>
+                                <h6 lang="en">pixel art</h6>
+                                <h6 lang="en">action</h6>
+                                <h6 lang="en">retro</h6>
+    
+                                <br><br>
+                                <ul class="game-id">
+                                    
+                                    <li value="4">
+                                        <a lang="pt_BR"><div class="Learn-more">Saiba mais</div></a>
+                                        <a lang="en"><div class="Learn-more">Learn More</div></a>
+                                    </li>
+                                </ul>
+                                </div>
 
-                            <!--¿¿DIE??-->
+                            <!--ACORODO COM O DEMÔNIO-->
                             <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
-                            <div class="warning">
-                                <span class="age-limit black-label">18</span>
-                            </div>  
-                            <h4>192</h4>
-                            <p>"192, como posso ajudar?"</p>
-                            <ul class="game-id">
-                               <li><a><div class="Learn-more Disable-learn-more">Em breve</div></a></li>    
-                            </ul>
-                            </div>
+                                <div class="warning">
+                                    <span class="age-limit black-label" lang="pt_BR">18</span>
+                                    <span class="age-limit black-label" lang="en">18</span>
+                                </div>
+                                <h4>Acordo com o Demônio</h4>
+                                <p lang="pt_BR">O quanto você sacrificaria para salvar uma vida?</p>
+    
+                                <p lang="en">How much would you sacrifice to save a life?</p>
+                                <h6 lang="pt_BR">Pixel art</h6>
+                                <h6 lang="pt_BR">Terror</h6>
+
+                                <h6 lang="en">Pixel art</h6>
+                                <h6 lang="en">Terror</h6>
+
+                                <br><br>
+
+                                <ul class="game-id">
+                                    <li>
+                                        <a><div class="Learn-more Disable-learn-more" lang="pt_BR">Em breve</div></a>
+                                        <a><div class="Learn-more Disable-learn-more" lang="en">Comming soon</div></a>
+                                    </li>
+                                </ul>
+                                </div> 
+
+                            <!--LEVEL 13-->
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-3 card disable-card">
+                                    <div class="warning">
+                                        <span class="age-limit black-label" lang="pt_BR">18</span>
+                                        <span class="age-limit black-label" lang="en">18</span>
+                                    </div>
+                                    <h4>13° Andar</h4>
+                                    <p lang="pt_BR">Depois de entrar não há saída.</p>
+                                    <h6 lang="pt_BR">Ação em 3D</h6>
+                                    <h6 lang="pt_BR">Drama</h6>
+                                    <h6 lang="pt_BR">Terror</h6>
+        
+                                    <p lang="en">After entering there is no exit.</p>
+                                    <h6 lang="en">3D Action</h6>
+                                    <h6 lang="en">Drama</h6>
+                                    <h6 lang="en">Terror</h6>
+        
+                                    <br><br>
+                                    <ul class="game-id">
+                                       <li>
+                                        <a><div class="Learn-more Disable-learn-more" lang="pt_BR">Em breve</div></a>
+                                        <a><div class="Learn-more Disable-learn-more" lang="en">Comming soon</div></a>
+                                        </li>
+                                    </ul>
+                            </div>   
+                            
+                            
+
                         </div>
                     </div>
                 </div>
@@ -176,15 +250,29 @@
             <div class="container">
             <div class="row center-xs center-sm center-md center-lg">
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <h2>Sobre Nós</h2>
-                        <div class="row center-xs center-sm center-md middle-lg"><p>A Eximus é uma equipe que foi criada em 2016 por um grupo de amigos que se conheceram na faculdade e dividiam o mesmo sonho de criar uma produtora de jogos para celulares, computadores e videogames. 
+                    <h2 lang="pt_BR">Sobre Nós</h2>
+                    <h2 lang="en">About us</h2>
+                        <div class="row center-xs center-sm center-md middle-lg">
+                        <p lang="pt_BR">A Eximus é uma equipe que foi criada em 2016 por um grupo de amigos que se conheceram na faculdade e dividiam o mesmo sonho de criar uma produtora de jogos para celulares, computadores e videogames. 
                         <br><br>
                         A equipe é formada por cinco integrantes que ainda estão em processo de especialização e desenvolvendo seus primeiros jogos independentes.
+                        </p>
                         <br>
-                        <h3 class="quote">"Crescer significa mudar e mudar envolve riscos. <br>
+                        <h3 class="quote" lang="pt_BR">❝ Crescer significa mudar e mudar envolve riscos. <br>
                         É a passagem do conhecido para o desconhecido,
                         que assusta qualquer um, 
-                        Mas não àqueles que vivem-no."</h3>
+                        Mas não àqueles que vivem-no ❞</h3>
+
+                        <p lang="en">Eximus is an upcoming game company created in 2016 by a group of college friends who shared the dream of creating games for mobiles, computers, and consoles.
+                        <br><br>
+                        The team consists of five members, each individually working on the specialization and development of their own respective games.
+                        </p>
+                        <br>
+                        <h3 class="quote" lang="en">                    
+                        "Growth means change and change involves risks.<br>
+                        The path from known to the unknown,
+                        is commonly feared.
+                        But not for those who live for it."</h3>
                         </div>
                     </div>
                 </div>
@@ -197,16 +285,18 @@
             <div class="container">
                 <div class="row center-xs center-sm center-md center-lg">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h2>Equipe</h2>
+                        <h2 lang="pt_BR">Equipe</h2>
+                        <h2 lang="en">Team</h2>
                         <div class="row center-xs center-sm center-md center-lg">
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
-                             
+
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 person-card">                             
                             <ul class="ch-grid">
                                 <li>
                                     <div class="ch-item ch-img-1">
                                         <div class="ch-info">
                                             <h3>Carlos Eduardo</h3>
-                                            <p>Roteirista</p>
+                                            <p lang="pt_BR">Roteirista</p>
+                                            <p lang="en">Writer</p>
                                             <div class="links"><a href="http://facebook.com/Kaatuto" target="_blank"><i class="fa fa-facebook-square"></i></a>
                                             <a href="http://instagram.com/Kaatuto" target="_blank"><i class="fa fa-instagram"></i></a></div>
                                         </div>
@@ -215,13 +305,14 @@
                             </ul>
                             </div>
 
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 person-card">
                             <ul class="ch-grid">
                                 <li>
                                     <div class="ch-item ch-img-2">
                                         <div class="ch-info">
                                             <h3>Eduarda Michaelle</h3>
-                                            <p>musicista</p>
+                                            <p lang="pt_BR">musicista</p>
+                                            <p lang="en">Musician</p>
                                             <div class="links">
                                                 <a href="http://instagram.com/eduardamichaelle" target="_blank"><i class="fa fa-instagram" ></i></a>
                                                 <a href="https://www.youtube.com/channel/UCcPe99ZXyapwrMD3_stxsJQ" target="_blank"><i class="fa fa-youtube-play"></i></a>
@@ -233,13 +324,14 @@
                             </ul>
                             </div>
 
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 person-card">
                             <ul class="ch-grid">
                                 <li>
                                     <div class="ch-item ch-img-3">
                                         <div class="ch-info">
                                             <h3>Elias Vaz</h3>
-                                            <p>Ilustrador</p>
+                                            <p lang="pt_BR">Ilustrador</p>
+                                            <p lang="en">Illustrator</p>
                                             <div class="links"><a href="https://www.facebook.com/elias.vaz.56" target="_blank"><i class="fa fa-facebook-square"></i></a>
                                             <a href="https://www.instagram.com/eliastvaz/" target="_blank"><i class="fa fa-instagram"></i></a>
                                             <a href="https://www.artstation.com/eliasvaz" target="_blank"><div class="artstation"><img src="images/extras/Artstation.png"></div></a>
@@ -250,27 +342,17 @@
                             </ul>
                             </div>
 
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
-                            <ul class="ch-grid">
-                                <li>
-                                    <div class="ch-item ch-img-4">
-                                        <div class="ch-info">
-                                            <h3>Gelson Higino</h3>
-                                            <p>Programador</p>
-                                            <div class="links"><a href="https://www.facebook.com/ghhzN" target="_blank"><i class="fa fa-facebook-square"></i></a></div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 person-card">
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 person-card">
                             <ul class="ch-grid">
                                 <li>
                                     <div class="ch-item ch-img-5">
                                         <div class="ch-info">
                                             <h3>Kelly Cristina</h3>
-                                            <p>Programadora</p></div>
+                                            <p lang="pt_BR">Programadora</p>
+                                            <p lang="en">Programmer</p>
+                                            <div class="links">
+                                                <a href="https://www.linkedin.com/in/kelly-cristina-rodrigues-472113182/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -315,4 +397,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.js"></script>
     <script src="javascript/script.js"></script>
+    <script src="javascript/Glitch.js"></script>
 </html>

@@ -1,3 +1,5 @@
+$('*:lang(en)').hide();
+
 //SMOOTH SCROOLING
 $(document).ready(function () {
     "use strict";
@@ -27,7 +29,7 @@ $(window).scroll(function () {
                     "-ms-transform": "translate(0px,0px)",
                     "transform": "translate(0px,0px)"
                 });
-            }, 300 * (i + 1));
+            }, 150 * (i + 1));
         });
     }
 });
@@ -36,14 +38,14 @@ $(window).scroll(function () {
 $(window).scroll(function () {
     "use strict";
     var wScroll = $(this).scrollTop();
-    if (wScroll > $('.quote').offset().top - ($(window).height() / 1.5)) {
+    if (wScroll > $('.quote').offset().top - ($(window).height() / 1)) {
         $('.quote').each(function (i) {
             setTimeout(function () { $('.quote').css({
                 "opacity" : "1",
                 "-webkit-transform": "translate(0px,0px)",
                 "-ms-transform": "translate(0px,0px)",
                 "transform": "translate(0px,0px)"
-            }); }, 300 * (i + 1));
+            }); }, 200 * (i + 1));
         });
     }
 });
@@ -52,7 +54,7 @@ $(window).scroll(function () {
 $(window).scroll(function () {
     "use strict";
     var wScroll = $(this).scrollTop();
-    if (wScroll > $('.ch-item').offset().top - ($(window).height() / 1.5)) {
+    if (wScroll > $('.ch-item').offset().top - ($(window).height() )) {
         $('.ch-item').each(function (i) {
             setTimeout(function () {
                 $('.ch-item').eq(i).css({
@@ -61,7 +63,7 @@ $(window).scroll(function () {
                     "-ms-transform": "translate(0px,0px)",
                     "transform": "translate(0px,0px)"
                 });
-            }, 300 * (i + 1));
+            }, 100 * (i + 1));
         });
     }
 });
@@ -79,20 +81,37 @@ function closeNav() {
 }
 
 //LANGUAGE POPUP
-$('#language-popup').animate({top: "0px"},500, function(){});
+$('#language-popup').animate({right: "100px"},500, function(){});
 function closePopup() {
     "use strict";
     $('#language-popup').css({
-        "margin-top": "-50px", 
+        "right": "-200px",
         "transition": "all .5s ease-in-out"
     });
 }
+
+var languagePT = true;
+$('#change-language').click(function(){
+    $('*:lang(pt_BR)').toggle();
+    $('*:lang(en)').toggle();
+    if(languagePT)
+        languagePT = false;
+    else    
+        languagePT = true;
+});
 
 //GAMES LEARN MORE
 function openWindow() {
     "use strict";
     document.getElementById("card-more").style.visibility = "visible";
     document.getElementById("card-more").style.opacity = "1";
+    if(languagePT){
+        $('*:lang(pt_BR)').show();
+        $('*:lang(en)').hide();
+    }else{
+        $('*:lang(en)').show();
+        $('*:lang(pt_BR)').hide();
+    }
 }
 
 function closeWindow() {
@@ -108,25 +127,25 @@ function closeWindow() {
 //DISPLAY TIME AVAIBLE
     $().ready(function(){
         $('.limited-edition').hover(function(){$("#describe-limited").fadeTo(150, 1);$("#describe-limited").show();},
-                                    function(){$("#describe-limited").hide();$("#describe-limited").fadeTo(150, 0)});       
+                                    function(){$("#describe-limited").hide();$("#describe-limited").fadeTo(150, 0);});       
     });
 
     //AGE RESTRICTION
     $().ready(function(){
-        $('.blue-label').hover(function(){$(this).text("10 anos");},
-                                function(){$(this).text("10")});
-        $('.yellow-label').hover(function(){$(this).text("12 anos");},
-                                 function(){$(this).text("12")});
-        $('.orange-label').hover(function(){$(this).text("14 anos");},
-                                 function(){$(this).text("14")});
-        $('.red-label').hover(function(){$(this).text("16 anos");},
-                              function(){$(this).text("16")});
-        $('.black-label').hover(function(){$(this).text("18 anos");},
-                                function(){$(this).text("18")});
+            $('span.blue-label').hover(function(){$(this).text("10 anos");},
+                                    function(){$(this).text("10");});
+            $('span.yellow-label').hover(function(){$(this).text("12 anos");},
+                                    function(){$(this).text("12");});
+            $('span.orange-label').hover(function(){$(this).text("14 anos");},
+                                    function(){$(this).text("14");});
+            $('span.red-label').hover(function(){$(this).text("16 anos");},
+                                function(){$(this).text("16");});
+            $('span.black-label').hover(function(){$(this).text("18 anos");},
+                                    function(){$(this).text("18");});
     });
 
 //GAME LIST REQUEST
-var games = [{
+var games_pt_BR = [{
         "name": "Efêmero",
         "brief": "Efêmero conta a história de um jovem que perdeu a felicidade e não encontra um propósito para seguir em frente. Sua vida se tornou monótona e nada que ele faça o faz se sentir bem e com isso ele descobre que tudo é temporário, e que apenas por um dia ele poderia mudar seu destino.",
         "images": [
@@ -135,41 +154,88 @@ var games = [{
             "images/jogos/efemero-deck.jpg"],
         "tags": ["windows","Drama","pixel art","psicológico"],
         "age": "16",
-        "devices": "fa fa-windows",
         "play": "enable",
         "url": "https://gamejolt.com/games/efemero/281230"
         },
+        {
+        "name": "Acordo Com O Demônio",
+        "brief": "",
+        "images": [],
+        "tags": ["windows","Drama","pixel art","psicológico"],
+        "age": "16",
+        "play": "disable"
+        },
+        {
+        "name": "Catching The World: Enchantress",
+        "brief": "",
+        "images": [
+            "images/jogos/Idle_mage.jpg",],
+        "tags": ["Andorid phone","Ação em 3D"],
+        "age": "10",
+        "play": "disable",
+        },
+        {},
         {
         "name": "Herói Do Vazio",
         "brief": "Demétrio é um agente renomado da Gênesis, uma instituição governamental de proteção à Via Láctea. Ele é enviado em uma importante missão para impedir que uma fissura de uma dimensão paralela corrompa e destrua o Sistema Solar de uma vez por todas.",
         "images": [
             "images/jogos/heroi_do_vazio.jpg"],
-        "tags": ["windows","pixel art","action","retro"],
+        "tags": ["windows","pixel art","ação","retro"],
         "age": "16",
-        "devices": "fa fa-windows",
         "play": "disable",
-        },
-        {"name": "Arcade Eximus",
-        "brief": "O jogo apresenta uma coletânea de minigames retros aonde você tem que defender a cidade de uma orda de orcs furiosos, lutar pela sua vida enquanto corre de zumbis em uma cidade abandonada e ajudar os pobres matando os guardas e roubando o tesouro do rei.<br>",
-        "images": [
-            "images/jogos/arcade_eximus_2.jpg",
-            "images/jogos/witcherwall.jpg",
-            "images/jogos/z_runner.jpg",
-            "images/jogos/lady_robin_hood.jpg"],
-        "tags": ["windows","arcade","pixel art","game jam"],
-        "age": "14",
-        "devices": "fa fa-windows",
-        "play": "enable",
-        "url": 'https://gamejolt.com/games/eximus-arcade/294292'
-        }        
+        }   
+];
+
+var games_en = [{
+    "name": "Efêmero",
+    "brief": "Ephemeral tells the story about a guy who lost happiness and can't find a purpose to move on. His life became monotonous and nothing that he does makes him feel better. With that, he discovers that everything is temporary and that just for one day he could change his destiny.",
+    "images": [
+        "images/jogos/efemero.jpg",
+        "images/jogos/efemero-start.jpg",
+        "images/jogos/efemero-deck.jpg"],
+    "tags": ["windows","drama","pixel art","psychological"],
+    "age": "16",
+    "play": "enable",
+    "url": "https://gamejolt.com/games/efemero/281230"
+    },
+    {
+    "name": "Acordo Com O Demônio",
+    "brief": "",
+    "images": [],
+    "tags": ["windows","Drama","pixel art","psicológico"],
+    "age": "16",
+    "play": "enable",
+    "url": "https://gamejolt.com/games/efemero/281230"
+    },
+    {
+    "name": "Catching The World: Enchantress",
+    "brief": "",
+    "images": [
+        "images/jogos/Idle_mage.jpg"],
+    "tags": ["windows","Drama","pixel art","psicológico"],
+    "age": "16",
+    "play": "enable",
+    "url": "https://gamejolt.com/games/efemero/281230"
+    },
+    {},
+    {
+    "name": "Herói Do Vazio",
+    "brief": "Demétrio is a renowned Genesis agent, a governmental protection institution of the Milky Way. He is sent on an important mission to prevent a parallel dimension's fissure from corrupting and destroying the Solar System for good.",
+    "images": [
+        "images/jogos/heroi_do_vazio.jpg"],
+    "tags": ["windows","pixel art","action","retro"],
+    "age": "16",
+    "play": "disable",
+    }     
 ];
 
 //SET THE TAGS
 function tagsGenerate(numIDGame) {
     "use strict";
     var output = "";
-    for (var i = 0; i < games[numIDGame].tags.length; i++){
-        output += '<h6>'+ games[numIDGame].tags[i] +' </h6>';
+    for (var i = 0; i < games_pt_BR[numIDGame].tags.length; i++){
+        output += '<h6 lang="pt_BR">'+ games_pt_BR[numIDGame].tags[i]+'</h6>';
+        output += '<h6 lang="en">'+ games_en[numIDGame].tags[i]+'</h6>';
     }
     return output;
 }
@@ -177,14 +243,15 @@ function tagsGenerate(numIDGame) {
 //SET THE IMAGES
 function imageGenerate(numIDGame){
     swiper.removeAllSlides();
-    for(var i = 0; i < games[numIDGame].images.length; i++){
-        swiper.appendSlide('<div class="swiper-slide"><img src="' + games[numIDGame].images[i] +'"></div>')    
+    for(var i = 0; i < games_pt_BR[numIDGame].images.length; i++){
+        swiper.appendSlide('<div class="swiper-slide"><img src="' + games_pt_BR[numIDGame].images[i] +'"></div>');
     }
 }
 
 //SET SWIPER
 var swiper = new Swiper('.swiper-container', {
     grabCursor: true,
+    roundLengths: true,
     pagination: {
         el: '.swiper-pagination',
         dynamicBullets: true,
@@ -193,45 +260,58 @@ var swiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    
 });
 
 //SET THE STATUS OF THE BUTTONS
 function buttonGenerate(numIDGame) {
     "use strict";
-    var play = $('#play');
+    var play_en = $("#play_en");
+    var play_pt_BR = $("#play_pt");
     
-    if(games[numIDGame].play == "disable"){
-        play.addClass("disable-play-btn");
-        play.removeAttr("href");
-        document.getElementById("play").innerHTML = "Em Breve";
-        
-    }else if(games[numIDGame].play == "enable" && games[numIDGame].crowdfunding == "on"){
-        play.addClass("enable-crowdfunding play-btn");
-        play.removeClass("disable-play-btn");
-        document.getElementById("play").innerHTML = "jogar agora";
-        document.getElementById("play").href = games[numIDGame].url;     
+    if(games_pt_BR[numIDGame].play == "disable"){
+        play_pt_BR.addClass("disable-play-btn");
+        play_pt_BR.removeAttr("href");
+        document.getElementById("play_pt").innerHTML = "Em Breve";
     }else{
-        play.removeClass("disable-play-btn");
-        document.getElementById("play").innerHTML = "Jogar agora";
-        document.getElementById("play").href = games[numIDGame].url;
+        play_pt_BR.removeClass("disable-play-btn");
+        document.getElementById("play_pt").innerHTML = "Jogar agora";
+        document.getElementById("play_pt").href = games_pt_BR[numIDGame].url;
+    }
+    if(games_en[numIDGame].play == "disable"){
+        play_en.addClass("disable-play-btn");
+        play_en.removeAttr("href");
+        document.getElementById("play_en").innerHTML = "Coming Soon";
+    }else{
+        play_en.removeClass("disable-play-btn");
+        document.getElementById("play_en").innerHTML = "Play now";
+        document.getElementById("play_en").href = games_en[numIDGame].url;
+        
     }
 }
 
 //SET AGE AND HOVER EFFECT TO AGE BUTTON
 function ageGeneration(numIDGame){
     "use strict";
-    var age = games[numIDGame].age;
+    var age_pt_BR = games_pt_BR[numIDGame].age;
+    var age_en = games_en[numIDGame].age;
 
     //SET THE TEXT TO THE BUTTON
-    if(age != "livre"){
-        document.getElementById("age-restriction").innerHTML = "Não recomendado para menores de " + age + " anos";
+    if(age_pt_BR != "livre"){
+        document.getElementById("age-restriction_pt").innerHTML = "Não recomendado para menores de " + age_pt_BR + " anos";
     }else
-        document.getElementById("age-restriction").innerHTML =  "Livre para todos os publicos";
+        document.getElementById("age-restriction_pt").innerHTML =  "Livre para todos os publicos";
+
+    
+    if(age_en != "livre"){
+        document.getElementById("age-restriction_en").innerHTML = "Not recommended for people under " + age_en + " years old";
+    }else
+        document.getElementById("age-restriction_en").innerHTML =  "Everyone can play";
 }
 
 $().ready(function(){
     $("#age-restriction").hover(function(){$("#describe-window").fadeTo(150, 1);$("#describe-window").show();},
-                                 function(){$("#describe-window").hide();$("#describe-window").fadeTo(150, 0)});       
+                                 function(){$("#describe-window").hide();$("#describe-window").fadeTo(150, 0);});       
 });
 
 
@@ -251,8 +331,9 @@ function windowInfo(gameID) {
     imageGenerate(gameID);
     buttonGenerate(gameID);
     ageGeneration(gameID);
-    document.getElementById("game-title").innerHTML = games[gameID].name;
-    document.getElementById("game-brief").innerHTML = games[gameID].brief;
+    document.getElementById("game-title").innerHTML = games_pt_BR[gameID].name;
+    document.getElementById("game-brief_pt").innerHTML = games_pt_BR[gameID].brief;
+    document.getElementById("game-brief_en").innerHTML = games_en[gameID].brief;
     document.getElementById("game-tags").innerHTML = tagsGenerate(gameID);
     openWindow();
 }
