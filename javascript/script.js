@@ -121,7 +121,7 @@ function closeWindow() {
         document.getElementById("card-more").style.visibility = "hidden";
         $('#extra-tab').hide();
         $('#learn-more').show();
-    }, 250);
+    }, 250);    
 }
 
 //DISPLAY TIME AVAIBLE
@@ -145,7 +145,8 @@ function closeWindow() {
     });
 
 //GAME LIST REQUEST
-var games_pt_BR = [{
+var games_pt_BR = [
+    {
         "name": "Efêmero",
         "brief": "Efêmero conta a história de um jovem que perdeu a felicidade e não encontra um propósito para seguir em frente. Sua vida se tornou monótona e nada que ele faça o faz se sentir bem e com isso ele descobre que tudo é temporário, e que apenas por um dia ele poderia mudar seu destino.",
         "images": [
@@ -155,27 +156,43 @@ var games_pt_BR = [{
         "tags": ["windows","Drama","pixel art","psicológico"],
         "age": "16",
         "play": "enable",
-        "url": "https://gamejolt.com/games/efemero/281230"
-        },
-        {
+        "url": ["https://gamejolt.com/games/efemero/281230"],
+        "video":[]
+    },
+    {
         "name": "Acordo Com O Demônio",
-        "brief": "",
+        "brief": "O quanto você sacrificaria para salvar uma vida?",
         "images": [],
-        "tags": ["windows","Drama","pixel art","psicológico"],
+        "tags": ["pixel art","terror"],
         "age": "16",
-        "play": "disable"
-        },
-        {
+        "play": "disable",
+        "video":["https://www.youtube.com/embed/ROl0kn3sboQ"]
+    },
+    {
         "name": "Catching The World: Enchantress",
-        "brief": "",
+        "brief": "Você é um gato que foi encantado e agora tem que enfrentar monstros para sua dona, uma bruxa.",
         "images": [
             "images/jogos/Idle_mage.jpg",],
-        "tags": ["Andorid phone","Ação em 3D"],
+        "tags": ["RPG","Andorid","Fantasia","Ação em 3D"],
         "age": "10",
         "play": "disable",
-        },
-        {},
-        {
+        "video":["https://www.youtube.com/embed/fj50OjuffXQ"]
+    },
+    {
+        "name": "Arcade Eximus",
+        "brief": "O jogo apresenta uma coletânea de minigames retros aonde você tem que defender a cidade de uma orda de orcs furiosos, lutar pela sua vida enquanto corre de zumbis em uma cidade abandonada e ajudar os pobres matando os guardas e roubando o tesouro do rei.",
+        "images": [
+            "images/jogos/arcade_eximus.jpg",
+            "images/jogos/arcade_lady_robin_hood.jpg",
+            "images/jogos/arcade_witcherwall.jpg",
+            "images/jogos/arcade_z_runner.jpg"],
+        "tags": ["windows","pixel art","game jam","retrô"],
+        "age": "12",
+        "play": "enable",
+        "url": "https://gamejolt.com/games/eximus-arcade/294292",
+        "video":["https://www.youtube.com/embed/UKFoX55yrXs","https://www.youtube.com/embed/y8UY34RvWd4","https://www.youtube.com/embed/ePnK07h8geY"]
+    },
+    {
         "name": "Herói Do Vazio",
         "brief": "Demétrio é um agente renomado da Gênesis, uma instituição governamental de proteção à Via Láctea. Ele é enviado em uma importante missão para impedir que uma fissura de uma dimensão paralela corrompa e destrua o Sistema Solar de uma vez por todas.",
         "images": [
@@ -183,49 +200,65 @@ var games_pt_BR = [{
         "tags": ["windows","pixel art","ação","retro"],
         "age": "16",
         "play": "disable",
+        "video":["https://www.youtube.com/embed/E613s2zaMq0"]
         }   
 ];
 
-var games_en = [{
-    "name": "Efêmero",
-    "brief": "Ephemeral tells the story about a guy who lost happiness and can't find a purpose to move on. His life became monotonous and nothing that he does makes him feel better. With that, he discovers that everything is temporary and that just for one day he could change his destiny.",
-    "images": [
-        "images/jogos/efemero.jpg",
-        "images/jogos/efemero-start.jpg",
-        "images/jogos/efemero-deck.jpg"],
-    "tags": ["windows","drama","pixel art","psychological"],
-    "age": "16",
-    "play": "enable",
-    "url": "https://gamejolt.com/games/efemero/281230"
+var games_en = [
+    {
+        "name": "Efêmero",
+        "brief": "Ephemeral tells the story about a guy who lost happiness and can't find a purpose to move on. His life became monotonous and nothing that he does makes him feel better. With that, he discovers that everything is temporary and that just for one day he could change his destiny.",
+        "images": [
+            "images/jogos/efemero.jpg",
+            "images/jogos/efemero-start.jpg",
+            "images/jogos/efemero-deck.jpg"],
+        "tags": ["windows","drama","pixel art","psychological"],
+        "age": "16",
+        "play": "enable",
+        "url": "https://gamejolt.com/games/efemero/281230"
     },
     {
-    "name": "Acordo Com O Demônio",
-    "brief": "",
-    "images": [],
-    "tags": ["windows","Drama","pixel art","psicológico"],
-    "age": "16",
-    "play": "enable",
-    "url": "https://gamejolt.com/games/efemero/281230"
+        "name": "Acordo Com O Demônio",
+        "brief": "How much would you sacrifice to save a life?",
+        "images": [],
+        "tags": ["pixel art","terror"],
+        "age": "16",
+        "play": "enable",
+        "url": "https://gamejolt.com/games/efemero/281230",
+        "video":["https://www.youtube.com/embed/ROl0kn3sboQ"]
     },
     {
-    "name": "Catching The World: Enchantress",
-    "brief": "",
-    "images": [
-        "images/jogos/Idle_mage.jpg"],
-    "tags": ["windows","Drama","pixel art","psicológico"],
-    "age": "16",
-    "play": "enable",
-    "url": "https://gamejolt.com/games/efemero/281230"
+        "name": "Catching The World: Enchantress",
+        "brief": "You are a cat that has been enchanted and now has to face monsters for its owner, a witch.",
+        "images": [
+            "images/jogos/Idle_mage.jpg"],
+        "tags": ["RPG","Andorid","Fantasy","Action in 3D"],
+        "age": "10",
+        "play": "disable"
     },
-    {},
     {
-    "name": "Herói Do Vazio",
-    "brief": "Demétrio is a renowned Genesis agent, a governmental protection institution of the Milky Way. He is sent on an important mission to prevent a parallel dimension's fissure from corrupting and destroying the Solar System for good.",
-    "images": [
-        "images/jogos/heroi_do_vazio.jpg"],
-    "tags": ["windows","pixel art","action","retro"],
-    "age": "16",
-    "play": "disable",
+        "name": "Arcade Eximus",
+        "brief": "This game is a collection of retro's minigames where you have to defend the city from a horde of angry orcs, fight for your life while run from zombies in a abandoned city and help the pour killing guards and stealing from the king",
+        "images": [
+            "images/jogos/arcade_eximus.jpg",
+            "images/jogos/arcade_lady_robin_hood.jpg",
+            "images/jogos/arcade_witcherwall.jpg",
+            "images/jogos/arcade_z_runner.jpg"],
+        "tags": ["windows","pixel art","game jam","retro"],
+        "age": "12",
+        "play": "enable",
+        "url": "https://gamejolt.com/games/eximus-arcade/294292",
+        "video":["https://www.youtube.com/embed/UKFoX55yrXs","https://www.youtube.com/embed/y8UY34RvWd4","https://www.youtube.com/embed/ePnK07h8geY"]
+    },
+    {
+        "name": "Herói Do Vazio",
+        "brief": "Demétrio is a renowned Genesis agent, a governmental protection institution of the Milky Way. He is sent on an important mission to prevent a parallel dimension's fissure from corrupting and destroying the Solar System for good.",
+        "images": [
+            "images/jogos/heroi_do_vazio.jpg"],
+        "tags": ["windows","pixel art","action","retro"],
+        "age": "16",
+        "play": "disable",
+        "video":["https://www.youtube.com/embed/E613s2zaMq0"]
     }     
 ];
 
@@ -245,6 +278,11 @@ function imageGenerate(numIDGame){
     swiper.removeAllSlides();
     for(var i = 0; i < games_pt_BR[numIDGame].images.length; i++){
         swiper.appendSlide('<div class="swiper-slide"><img src="' + games_pt_BR[numIDGame].images[i] +'"></div>');
+    }
+    if(games_pt_BR[numIDGame].video.length!=null){
+        for(i = 0; i < games_pt_BR[numIDGame].video.length; i++){
+            swiper.appendSlide('<div class="swiper-slide youtube-video"><iframe width="100%" height="100%" src="' + games_pt_BR[numIDGame].video[i] + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+        }
     }
 }
 
